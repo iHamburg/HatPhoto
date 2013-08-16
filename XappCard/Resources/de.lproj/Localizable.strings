@@ -1,0 +1,139 @@
+/* 
+  Localizable.strings
+  XappCard
+
+  Created by  on 14.12.11.
+  Copyright (c) 2011 Xappsoft. All rights reserved.
+*/
+
+
+/* Standard */
+
+
+"Dismiss" = "Zurück";
+"Done" = "Fertig";
+"Contact" = "Kontakt";
+"Rate" = "Bewerte";
+"Lock" = "Sperren";
+"Unlock" = "Freischalten";
+"Cancel" = "Abbrechen";
+"Edit" = "Bearbeiten";
+"Love" = "Liebe";
+"Settings" = "Einstellungen";
+"Cancel" = "Abbrechen";
+"Send"   = "Schicken";
+"Remove" = "Entfernen";
+"Yes"    = "Ja";
+"No"    = "Nein";
+"Buy"   = "Kaufen";
+"No,Thanks" = "Nein, danke";
+"IAP"       = "In-App-Käufe";
+"Restore" = "Wiederherstellen";
+
+/*Standard Question*/
+"DeleteTitle" = "Möchten Sie sie wirklich löschen?";
+
+/*icon title*/
+"iToCover" = "Außenseite";
+"iPhoto" = "Fotos";
+"iText" = "Texte";
+"iZettel" = "Segensworter";
+"iAction" = "Aktionen";
+"iSetting" = "Einstellungen";
+"iChoose" = "Alle Außenseiten";
+"iCoverPhoto" = "Hintergrundbild";
+"iToContent" = "Innenseite";
+"iLove" = "Liebe";
+"Cards Dock" = "Kartendock";
+/* rate */
+"rateTitle" = "";
+"rateMsg"   = "Gefällt dir My eCard, freuen wir uns über eine Bewertung. Vielen Dank!";
+
+"rateTitlePad" = "Bewerte My eCard";
+"rateMsgPad"   = "Wenn dir My eCard gefällt, freuen wir uns über eine Bewertung. Das dauert nicht länger als eine Minute. Vielen Dank!";
+"ratenow"   = "Jetzt bewerten";
+"ratelater" = "Später erinnern";
+"rateno"    = "Nein, danke";
+
+/*rootVC*/
+"PhotoActionTitel" = "Für die Mehrfachauswahl von Fotos verlangt Apple die Einwilligung auf die Standortdaten. Erst dann haben Apps Zugriff auf das Fotoalbum. Es werden keine Daten in irgendeiner Weise in der App gesammelt.\n\nDer Lokalisierungsdienst kann jeder Zeit unter Einstellungen -> Ortungsdienste eingeschaltet bzw. ausgeschaltet werden.";
+"SavePNGAlertTitle" = "Gespeichert!";
+
+"AddAlertTitle" = "Sind Sie sicher, alle Inhalte zu verwerfen und neu aufzubauen?";
+"TextLabelTitel" = "Text";
+"ZettelTitel" = "Segensworter";
+"StickerTitel" = "Animierte Dekoration";
+
+"remindTitle" = "Erinnern mich am";
+
+/*action*/
+"emailPNG" = "Per E-Mail senden";
+"Save PNG" = "Zum Album hinzufügen";
+"send it later" = "Später senden";
+"emailText1" = "Diese Karte wurde mit ";
+"emailText2" = " erstellt.";
+
+
+/* CoverVC*/
+
+"changeBGFromLibrary" = "Open photo library";
+"changeBGFromCovers" = "Open our covers again";
+"toContent" = "To content";
+"CoverTextWarning" = "In diesem Paket von Umschlägen können nur Fotos hinzugefügt werden";
+"lockCoverPhoto" = "Foto sperren";
+"unlockCoverPhoto" = "Foto freischalten";
+"Tip:\nLong press the photo to lock/unlock, and then add texts" = "Hinweis:\nDrücken Sie etwas länger auf ein Foto um es zu sperren oder freischalten.";
+
+/* InfoVC */
+"InformationTitle" = "Hilfe & Kontakt";
+"InformationText" = "\n • Rotation\n\nBild mit 2 Fingern drehen\n\n • Skalieren\n\nBild mit 2 Fingern vergrößern oder verkleinern\n\n • Kopien\n\n2 x Tippen um Bild zu kopieren\n\n • Löschen\n\nBild einfach mit Finger ziehen und wegwerfen\n\n • Sperren, Freischalten, bearbeiten und Bild als Hintergrund einzurichten\n\nLange drücken auf das Objekt";
+"InfoEmailSubject" = "Feedback für My eCard";
+"Instruction" = "Anleitung";
+"MoreApps" = "Mehr Apps";
+
+/* SettingVC*/
+"Photo Properties" = "Foto";
+"Card Properties" = "Beim Schicken der E-Karte";
+"Border" = "Rahmen";
+"Border Color" = "Rahmenfarbe";
+"Shadow" = "Schatten";
+"Cover" = "Außenseite";
+"Inside" = "Innenseite";
+
+
+/*My View*/
+"As Background" = "Als Hintergrundbild";
+"Default Background" = "Zurück zu den ursprünglichen Hintergrund";
+
+/*AutoAlert*/
+"MaxPictureTitle" = "Das Limit von 10 Bildern ist erreicht.";
+
+"tryitagain" = "Bitte versuchen Sie es erneut.";
+
+/*notification*/
+"notify body" = "Du hast Grußkarte, die heute verschickt werden soll! Klick hier für Details.";
+
+/* In-app Purchase*/
+//"cardsiapTitle" = "Mit dieser Gratisversion können nur eine Grußkarte gespeichert werden. Möchten Sie die Einschränkung aufheben?";
+//"CoverIAPTitle" = "Mit dieser Gratisversion können Sie 3 Vorlagen kostenlos benutzen.  Möchten Sie Alle Vorlagen erwerben?";
+"IapTitle" = "Möchten Sie die Vollversion erwerben?";
+"IAPTitlePad" = "In-App-Käufe";
+"IAPMsgPhone" = "Möchten Sie die Vollversion freischalten?";
+"IAPMsgPad" = "Möchten Sie die Vollversion freischalten für mehr schöne Umschläge, unbegrenzt Grußkarten und Werbung entfernen?";
+"IAPCoverMsgPhone" = "10 schöne Umschläge für nur €0.89";
+"IAPCoverMsgPad" = "10 schöne Umschläge für nur €0.89";
+
+"HalloweenPackagePrice" = "10 schöne Halloween 2012 Umschläge für nur €0.89";
+"ThanksgivingPackagePrice" = "10 schöne Thanksgiving 2012 Umschläge für nur €0.89";
+"AnniveraryPackageTitle" = "10 schöne Umschläge zum Jubiläum für nur €0.89";
+"ChristmasPackageTitle" = "10 schöne Umschläge zu Weihnachten und Neujahr für €0.89";
+"HalloweenTitle" = "Spezielle Umschläge";
+
+/*update*/
+"Warning" = "Warnung";
+"No item restored" = "Kein Artikel konnte wiederhergestellt werden";
+
+
+"UpdateTitle" = "Neues Feature!";
+"UpdateMsg" = "Spezielle Umschläge für Halloween hinzugefügt! Klick auf den Kürbis und sich anschauen wie die Umschläge aussehen, bereit für den Horrornacht per In-App-Käufe!";
+"UpdateMsg2.6" = "★ Schöne Vorlagen für Thanksgiving und Jubiläum\n★ Stylische Vorlagen für Jubiläum\n★ Mehr als 70 Schriftarten zur Auswahl!";

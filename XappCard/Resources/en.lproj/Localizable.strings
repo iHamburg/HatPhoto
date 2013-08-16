@@ -1,0 +1,144 @@
+/* 
+  Localizable.strings
+  XappCard
+
+  Created by  on 14.12.11.
+  Copyright (c) 2011 Xappsoft. All rights reserved.
+*/
+
+
+/* Standard */
+
+"Dismiss" = "Dismiss";
+"Done" = "Done";
+"Contact" = "Contact";
+"Rate" = "Rate";
+"Lock" = "Lock";
+"Unlock" = "Unlock";
+"Cancel" = "Cancel";
+"Edit" = "Edit";
+"Love" = "Love";
+"Settings" = "Settings";
+"Cancel" = "Cancel";
+"Send"   = "Send";
+"Remove" = "Remove";
+"Yes"    = "Yes";
+"No"    = "No";
+"Buy"   = "Buy";
+"No,Thanks" = "No, thanks";
+"IAP"       = "In-App Purchase";
+"Restore" = "Restore";
+
+
+
+/*Standard Question*/
+"DeleteTitle" = "Do you really want to delete it?";
+
+/*icon title*/
+"iToCover" = "To Cover";
+"iPhoto" = "Photos";
+"iText" = "Texts";
+"iZettel" = "Blessing Words";
+"iAction" = "Actions";
+"iSetting" = "Settings";
+"iChoose" = "All Card Covers";
+"iCoverPhoto" = "Background";
+"iToContent" = "To Inside";
+"iLove" = "Love";
+"Cards Dock" = "Cards Dock";
+
+/* rate */
+"rateTitle" = "";
+"rateMsg"   = "If you like My eCard, please rate it on the App Store. Thank you!";
+
+"rateTitlePad" = "Dear user";
+"rateMsgPad"   = "Your rating helps us keep free updates coming. If you like My eCard, please rate it on the App Store, it takes less than a minute. Thank you!";
+"ratenow"   = "Rate 5 stars";
+"ratelater" = "Remind me later";
+"rateno"    = "No, thanks";
+
+/*root*/
+
+"PhotoActionTitel" = "Complying with Apple Application Programming Interface, location permission will be required by choosing more photos from albums at the same time. This app will not record your location information.\n\nYou can change this option under Settings -> Location Services at any time.";
+"SavePNGAlertTitle" = "Saved!";
+
+"AddAlertTitle" = "Are you sure to discard this card and build a new one?";
+"TextLabelTitel" = "Text";
+"ZettelTitel" = "Blessing Words";
+
+"remindTitle" = "Remind me on";
+
+/*action*/
+"emailPNG" = "Per Email send";
+"Save PNG" = "Add to Photo Library";
+"send it later" = "Sent it later";
+
+"emailText1" = "Card made with the iOS app ";
+"emailText2" = " for iPhone, iPad, and iPod Touch.";
+
+/* CoverVC*/
+
+"changeBGFromLibrary" = "My Photos";
+"changeBGFromCovers" = "To Card Covers";
+"toContent" = "To Inside";
+"CoverTextWarning" = "In this set of covers only photos can be added";
+"lockCoverPhoto" = "Lock Photo";
+"unlockCoverPhoto" = "Unlock Photo";
+"Tip:\nLong press the photo to lock/unlock, and then add texts" = "Tip:\nLong press the photo to lock/unlock, and then add texts";
+
+
+/* InfoVC */
+"InformationTitle" = "Help & Contact";
+"InformationText" = "\n • Rotate\n\nTurn the picture with 2 fingers\n\n • Scale\n\nIncrease or reduce the size of picture with 2 fingers\n\n • Copy\n\nDouble tap on the picture\n\n • Delete\n\nDrag the picture and throw it away\n\n • (Un)Lock, edit and set as background\n\nLong press on the object";
+"InfoEmailSubject" = "Feedback for My eCard";
+"Instruction" = "Instruction";
+"MoreApps" = "More Apps";
+
+/* SettingVC*/
+"Photo Properties" = "Photo";
+"Card Properties" = "When Sending eCard";
+"Border" = "Border";
+"Border Color" = "Border Color";
+"Shadow" = "Shadow";
+"Cover" = "Cover";
+"Inside" = "Inside";
+
+
+/*My View*/
+"As Background" = "As Background";
+"Default Background" = "Return to the original background";
+
+/*AlertView*/
+"MaxPictureTitle" = "10 pictures limit is reached.";
+
+"tryitagain" = "Please try it again.";
+
+/*notification*/
+"notify body" = "You greeting card should be sent out today! Click here for details.";
+
+/* IAP*/
+//"cardsiapTitle" = "With this free version you can only manage one greeting card. Do you want to remove the restriction?";
+//"CoverIAPTitle" = "With this free version you can use 3 covers for free. Would you like to acquire all covers?";
+"IapTitle" = "Do you want to unlock the full version with all features?";
+"HalloweenPackagePrice" = "10 beautiful Halloween 2012 covers for only $0.99";
+"ThanksgivingPackagePrice" = "10 beautiful Thanksgiving 2012 covers for only $0.99";
+"AnniveraryPackageTitle" = "10 beautiful Anniversary covers for only $0.99";
+"ChristmasPackageTitle" = "10 beautiful Christmas & New Year covers for $0.99";
+"HalloweenTitle" = "Special Covers";
+
+"IAPTitlePad"      = "In App Purchase";
+"IAPMsgPhone"      = "Unlock the full version for more covers, ecards and remove Ads?";
+"IAPMsgPad"        = "Do you want to unlock the full version for more pretty covers, unlimited number of ecards and remove the adverts?";
+"IAPCoverMsgPhone" = "10 beautiful new covers for only $0.99";
+"IAPCoverMsgPad"   = "10 beautiful new covers for only $0.99";
+
+
+
+/*update*/
+"Warning" = "Warning";
+
+"No item restored" = "No item could be restored";
+
+"UpdateTitle" = "New Features!";
+"UpdateMsg" = "Halloween special covers added! Click on the pumpkin, getting ready for the horror night via In-App Purchase!";
+"UpdateMsg2.6" = "★ Beautiful Thanksgiving Covers and Well-Designed Anniversary Covers are coming!\n★ Over 70 fonts to choose from!";
