@@ -11,7 +11,7 @@
 
 @implementation HatScrollView
 
-@synthesize parent, category = _category, index = _index;
+@synthesize parent;
 
 /**
  
@@ -30,26 +30,14 @@
 	
 }
 
-/**
- 
- 初始化所有的einheit
- 
- */
-- (void)setCategory:(HatCategory *)category{
-	_category = category;
-	
-	[self removeAllSubviews];
-
-	[self addSubview:_categoryB];
-
-
-		dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-
+- (void)loadHatBeforeiOS7 {
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        
 		@autoreleasepool {
-		
-			int availableNum = category.availableNum;
+            
+			int availableNum = _category.availableNum;
 			for (int i = 0; i< [_category.hatImgNames count]; i++) {
-				
+//				NSLog(@"enumerate # %d",i);
 				UIImage * img = [UIImage imageWithContentsOfFileName:[_category imgNameWithIndex:i]];
 				img = [img imageByScalingAndCroppingForWidth:45];
 				UIImageView *imgV = [[UIImageView alloc]initWithFrame:CGRectMake(margin+(margin+wImgV)*(i+1), 5, wImgV, wImgV)];
@@ -70,17 +58,70 @@
 					
 				}
 				dispatch_async(dispatch_get_main_queue(), ^{
-					
+					NSLog(@"back to main queue");
 					[self addSubview:imgV];
 				});
 				
 				[self setContentSize:CGSizeMake(CGRectGetMaxX(imgV.frame)+120, 0)];
 			}
 			
-		
+            
 		}
-
+        
 	});
+}
+
+- (void)loadHatAfteriOS7{
+    int availableNum = _category.availableNum;
+    for (int i = 0; i< [_category.hatImgNames count]; i++) {
+//        NSLog(@"enumerate # %d",i);
+        UIImage * img = [UIImage imageWithContentsOfFileName:[_category imgNameWithIndex:i]];
+        img = [img imageByScalingAndCroppingForWidth:45];
+        UIImageView *imgV = [[UIImageView alloc]initWithFrame:CGRectMake(margin+(margin+wImgV)*(i+1), 5, wImgV, wImgV)];
+        imgV.contentMode = UIViewContentModeCenter;
+        imgV.image = img;
+        imgV.userInteractionEnabled = YES;
+        [imgV addGestureRecognizer:[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(handleTap:)]];
+        imgV.tag = i+1;
+        imgV.layer.cornerRadius = 5;
+        
+        
+        if (i>=availableNum) {
+            
+            UIImageView *lockV = [[UIImageView alloc]initWithFrame:CGRectMake(wImgV-20, 0, 20, 20)];
+            lockV.image = [UIImage imageNamed:@"icon_lock.png"];
+            [imgV addSubview:lockV];
+            
+            
+        }
+ 
+        [self addSubview:imgV];
+        
+        [self setContentSize:CGSizeMake(CGRectGetMaxX(imgV.frame)+120, 0)];
+    }
+}
+/**
+ 
+ 初始化所有的einheit
+ 
+ */
+- (void)setCategory:(HatCategory *)category{
+	
+    L();
+    
+    _category = category;
+	
+	[self removeAllSubviews];
+
+	[self addSubview:_categoryB];
+
+    if (kVersion>=7.0) {
+        [self loadHatAfteriOS7];
+    }
+    else{
+          [self loadHatBeforeiOS7];
+    }
+  
 	
 	
 }

@@ -91,7 +91,7 @@
 
 #define kJPEGCompressionQuality 0.8
 
-
+#define isIOS7 (kVersion >= 7.0)
 
 
 

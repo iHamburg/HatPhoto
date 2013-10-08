@@ -15,7 +15,7 @@
 - (UIImage*)rotate:(UIImageOrientation)orient;
 
 - (UIImage*)imageByScalingAndCroppingForWidth:(float)width;
-+ (id) createRoundedRectImage:(UIImage*)image size:(CGSize)size;
+//+ (id) createRoundedRectImage:(UIImage*)image size:(CGSize)size;
 + (UIImage*)imageWithView:(UIView*)view;
 
 + (UIImage*)imageWithView:(UIView*)view faktor:(float)faktor;

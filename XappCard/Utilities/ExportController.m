@@ -164,21 +164,21 @@
 
     // Create the completion handler block.
     [tweetViewController setCompletionHandler:^(TWTweetComposeViewControllerResult result) {
-        NSString *output;
-        
-        switch (result) {
-            case TWTweetComposeViewControllerResultCancelled:
-                // The cancel button was tapped.
-                output = @"Tweet cancelled.";
-                break;
-            case TWTweetComposeViewControllerResultDone:
-                // The tweet was sent.
-                output = @"Tweet done.";
-				//				[FlurryAnalytics logEvent:@"Tweet sent"];
-                break;
-            default:
-                break;
-        }
+//        NSString *output;
+//        
+//        switch (result) {
+//            case TWTweetComposeViewControllerResultCancelled:
+//                // The cancel button was tapped.
+//                output = @"Tweet cancelled.";
+//                break;
+//            case TWTweetComposeViewControllerResultDone:
+//                // The tweet was sent.
+//                output = @"Tweet done.";
+//				//				[FlurryAnalytics logEvent:@"Tweet sent"];
+//                break;
+//            default:
+//                break;
+//        }
 		
         [[RootViewController sharedInstance] dismissModalViewControllerAnimated:YES];
 
@@ -210,7 +210,7 @@
 
 
 - (void)shareImage:(UIImage*)img text:(NSString*)text type:(ShareType)type{
-    NSString *shareType;
+    NSString *shareType = @"Unknown Share";
 	NSString *twitterText = [text stringByAppendingFormat:@"\nvia ShakeHat - Try on new Hats. %@",kAppShortLink];
 	if (type == ShareToAlbum) {
 		shareType = @"Album";

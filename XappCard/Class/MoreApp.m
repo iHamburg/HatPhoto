@@ -14,7 +14,7 @@
 
 
 - (id)initWithName:(NSString*)_name dictionary:(NSDictionary*)dict{
-	if (self == [super init]) {
+	if (self = [super init]) {
 		name = _name;
 		title = dict[@"Title"];
 		imgName = dict[@"Image"];

@@ -40,7 +40,7 @@ CGFloat _hAdBanner;
 - (void)loadView{
 //	L();
 	
-	NSLog(@"paid version # %d",isPaid());
+//	NSLog(@"paid version # %d",isPaid());
 	
 	r = [UIScreen mainScreen].bounds;
 	w = r.size.width;
@@ -53,26 +53,30 @@ CGFloat _hAdBanner;
 	[self checkVersion];
 	
 	containerRect = CGRectMake(0, 0, w, h-44); // 带Navibar
-//	bannerRect = CGRectMake(0, h-66, w, 66);
+
 
 	self.view.backgroundColor = [UIColor blackColor];
 	
 	_mainVC = [[MainViewController alloc]init];
 	_mainVC.view.alpha = 1;
+
 	nav = [[UINavigationController alloc]initWithRootViewController:_mainVC];
 	nav.view.frame = CGRectMake(0, 0, w, h);
 
+
+	if (kVersion < 7.0) {
+        [nav.navigationBar setTitleTextAttributes:
+         [NSDictionary dictionaryWithObjectsAndKeys:
+          [UIColor colorWithWhite:0.95 alpha:1],UITextAttributeTextColor,
+          [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8],UITextAttributeTextShadowColor,
+          [NSValue valueWithUIOffset:UIOffsetMake(0, 1)],UITextAttributeTextShadowOffset,
+          [UIFont fontWithName:@"Archive" size:0.0],UITextAttributeFont,
+          nil]];
+        
+        [nav.navigationBar setTintColor:kBlueColor];
+    
+    }
 	
-	[nav.navigationBar setTitleTextAttributes:
-	 [NSDictionary dictionaryWithObjectsAndKeys:
-	  [UIColor colorWithWhite:0.95 alpha:1],UITextAttributeTextColor,
-	  [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8],UITextAttributeTextShadowColor,
-	  [NSValue valueWithUIOffset:UIOffsetMake(0, 1)],UITextAttributeTextShadowOffset,
-	  [UIFont fontWithName:@"Archive" size:0.0],UITextAttributeFont,
-	  nil]];
-
-	[nav.navigationBar setTintColor:kBlueColor];
-
 	
 	[self.view addSubview:nav.view];
 	
@@ -118,7 +122,6 @@ CGFloat _hAdBanner;
 	if (firstLoadFlag) {
 		firstLoadFlag = NO;
 
-		
 	}
 	
 	[self test];
@@ -154,14 +157,13 @@ CGFloat _hAdBanner;
 	}
 	
 	
-	
 }
 
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
-//    return UIInterfaceOrientationIsLandscape(interfaceOrientation);
+
 	return UIInterfaceOrientationPortrait;
     
 }
@@ -255,9 +257,9 @@ CGFloat _hAdBanner;
 	[nav pushViewController:_shareVC animated:YES];
 }
 
-- (void)shareToMain{
-	
-}
+//- (void)shareToMain{
+//	
+//}
 
 - (void)toInstruction{
 	
@@ -277,39 +279,14 @@ CGFloat _hAdBanner;
 }
 
 - (void)toInfo{
-//	if (!info2VC) {
-//		info2VC = [[Info2ViewController alloc]init];
-//		info2VC.view.alpha = 1;
-//		info2VC.root = self;
-//	}
-//	
-//
-//
-//	[UIView beginAnimations:nil context:nil];
-//    [UIView setAnimationDuration:1];
-//    [UIView setAnimationBeginsFromCurrentState:NO];
-//    [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.view cache:YES];
-//	
-//    [self.view addSubview:info2VC.view];
-//    
-//    [UIView commitAnimations];
+
 
 
 	if (!infoVC) {
 		infoVC = [[InfoTableViewController alloc]initWithStyle:UITableViewStyleGrouped];
 		infoVC.view.frame = containerRect;
 	}
-//	[nav set];
-	
-//	CATransition *transition = [CATransition animation];
-//	transition.duration = 1;
-//	transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-//	transition.type = kCATransitionPush;
-//	transition.subtype = kCATransitionFromTop;
-//	transition.delegate = self;
-//	[nav.view.layer addAnimation:transition forKey:nil];
 
-	
 	[nav pushViewController:infoVC animated:YES];
 }
 

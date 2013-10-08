@@ -192,7 +192,7 @@
     
 //    @[@"Save",@"Email",@"Facebook", @"Twitter",@"Instagram"];
     int row = indexPath.row;
-    ShareType type;
+    ShareType type =  ShareToEmail;
     if (row == 0) {
 
         type = ShareToAlbum;

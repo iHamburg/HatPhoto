@@ -34,19 +34,22 @@
 
 - (void)loadView{
 	root = [RootViewController sharedInstance];
-	spriteManager = [SpriteManager sharedInstance];
+	
+    spriteManager = [SpriteManager sharedInstance];
+
 	
 	self.view = [[UIView alloc]initWithFrame:root.containerRect];
 	self.view.backgroundColor = kDarkPatternColor;
 
-	
 	_w = self.view.width;
 	_h = self.view.height;
 
 	self.title = @"Effect";
 	
+    
 	CGFloat yImgContainer = isPhoneRetina4?44:0;
-	_imgContainer = [[UIView alloc]initWithFrame:CGRectMake(0, yImgContainer, 320, 320)];
+	
+    _imgContainer = [[UIView alloc]initWithFrame:CGRectMake(0, yImgContainer, 320, 320)];
 	_imgContainer.layer.borderColor = kPhotoBorderColor.CGColor;
 	_imgContainer.layer.borderWidth = 5;
 	_imgContainer.layer.shadowColor = [UIColor colorWithWhite:0 alpha:1].CGColor;
@@ -82,7 +85,8 @@
 	_buttonContainer.backgroundColor = [UIColor viewFlipsideBackgroundColor];
 	
 	_functionB = [UIButton buttonWithFrame:CGRectMake(3, 3, 80, 26) title:@"Effect" imageName:nil target:self actcion:@selector(buttonDidClicked:)];
-	_frameB    = [UIButton buttonWithFrame:CGRectMake(CGRectGetMaxX(_functionB.frame)+3, 3, 80, 26) title:@"Frame" imageName:nil target:self actcion:@selector(buttonDidClicked:)];
+	
+    _frameB    = [UIButton buttonWithFrame:CGRectMake(CGRectGetMaxX(_functionB.frame)+3, 3, 80, 26) title:@"Frame" imageName:nil target:self actcion:@selector(buttonDidClicked:)];
 	
 	
 	NSArray *buttons = @[_functionB,_frameB];

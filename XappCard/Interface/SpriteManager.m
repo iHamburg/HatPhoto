@@ -16,17 +16,7 @@
 //@synthesize hatCategoryFont;
 @synthesize hatCategorys;
 
-//- (NSMutableArray*)availableHatCategorys{
-//	[availableHatCategorys removeAllObjects];
-//	
-//	for (HatCategory *cat in hatCategorys) {
-//		if (cat.available) {
-//			[availableHatCategorys addObject:cat];
-//		}
-//	}
-//	
-//	return availableHatCategorys;
-//}
+
 
 
 +(id)sharedInstance{
@@ -49,58 +39,19 @@
 		
 		
 		hatCategorys = [NSMutableArray array];
-//		availableHatCategorys = [NSMutableArray array];
-		
+
 		_availableHatImageNames = [NSMutableArray array];
 	
 		NSArray *hatCategoryArray = materialDict[@"HatCategories"];
 		for (NSDictionary *dict in hatCategoryArray) {
 			HatCategory *cat = [[HatCategory alloc]initWithDictionary:dict];
 			[hatCategorys addObject:cat];
-			
-//			if (cat.available) {
-//				[_availableHatImageNames addObjectsFromArray:cat.availableImgNames];
-//			}
-		}
-		
-//		NSLog(@"men available # %@, unavailable # %@",[hatCategorys[0] availableImgNames],[hatCategorys[0] unavailableImgNames]);
-//
-//		NSArray *hatArray = materialDict[@"Hat_Valentine"];
-//		HatCategory *cat = [[HatCategory alloc]init];
-//		cat.name = @"Valentine";
-//		cat.hatImgNames = [NSMutableArray arrayWithArray:hatArray];
-//		[hatCategorys addObject:cat];
-//	
-//		
-//		cat = [[HatCategory alloc]init];
-//		cat.name = @"Others";
-//		hatArray = materialDict[@"Hat_Others"];
-//		cat.hatImgNames = [NSMutableArray arrayWithArray:hatArray];
-//		[hatCategorys addObject:cat];
-//	
-//		cat = [[HatCategory alloc]init];
-//		cat.name = @"Temp";
-//		hatArray = materialDict[@"Hat_Temp"];
-//		cat.hatImgNames = [NSMutableArray arrayWithArray:hatArray];
-//		[hatCategorys addObject:cat];
-//	
-//		cat = [[HatCategory alloc]init];
-//		cat.name = @"New";
-//		NSMutableArray *imgNames = [NSMutableArray array];
-//		for (int i = 1; i<=50; i++) {
-//			[imgNames addObject:[NSString stringWithFormat:@"Hat_new_%d.png",i]];
-//		}
-//		[hatCategorys addObject:cat];
-//		cat.hatImgNames = imgNames;
-//	
-//		if (cat.available) {
-//			[_availableHatImageNames addObjectsFromArray:cat.hatImgNames];
-//		}
-////		NSLog(@"hatOthers # %@",hatOthersImgNames);
+        }
 	}
-	
 	return self;
 }
+
+
 
 
 - (NSString*)randomHatImageName{

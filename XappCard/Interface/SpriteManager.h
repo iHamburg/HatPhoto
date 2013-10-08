@@ -14,12 +14,10 @@
 @interface SpriteManager : NSObject{
 
 	
-//	NSArray *hatOthersImgNames;
 	int _lastRandomIndex;
 	NSMutableArray *_availableHatImageNames;
 }
 
-//@property (nonatomic, strong) NSMutableArray *availableHatCategorys;
 @property (nonatomic, strong) NSMutableArray *hatCategorys;
 
 

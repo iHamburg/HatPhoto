@@ -10,7 +10,7 @@
 
 #import "RootViewController.h"
 #import "FlurryAnalytics.h"
-#import "Controller.h"
+
 #import "FacebookManager.h"
 #import "CPMotionRecognizingWindow.h"
 
@@ -19,8 +19,6 @@
 @synthesize window = _window;
 @synthesize viewController = _viewController;
 @synthesize facebook;
-
-//static NSString *FLURRYPAIDKEY = @"RBR3HBMVH2Q5WWRBGFD6";
 
 static NSString *FLURRYFREEKEY = @"Q6F2JCSBVD9SXFZWC8GK";
 static NSString *ADMOBKEY = @"a1510e68ad9c726";
@@ -68,7 +66,7 @@ static NSString *ADMOBKEY = @"a1510e68ad9c726";
     ;
 #endif
 	
-	[self customizeAppearance];
+//	[self customizeAppearance];
 
 	self.window = [[CPMotionRecognizingWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 

@@ -12,7 +12,7 @@ Abstract: MyView several subviews, each of which can be moved by gestures. Illus
 
 //#import "PictureWithFrameView.h"
 //#import "CardEditView.h"
-#import "TextWidget.h"
+//#import "TextWidget.h"
 
 @interface MyView ()
 
@@ -48,8 +48,8 @@ Abstract: MyView several subviews, each of which can be moved by gestures. Illus
 #pragma mark === Setting up and tearing down ===
 #pragma mark
 
+
 /**
- 
  如果piece已经有gesture了，就不重复加了！
  */
 
@@ -351,20 +351,20 @@ Abstract: MyView several subviews, each of which can be moved by gestures. Illus
     if ([gestureRecognizer state] == UIGestureRecognizerStateBegan || [gestureRecognizer state] == UIGestureRecognizerStateChanged) {
 
 
-		if ([piece isKindOfClass:[TextWidget class]]) {
-			
-			float scale = gestureRecognizer.scale;
-			
-			[gestureRecognizer setScale:1];
-			
-			[(TextWidget*)piece applyScale:scale];
-			
-		}
-		else{
+//		if ([piece isKindOfClass:[TextWidget class]]) {
+//			
+//			float scale = gestureRecognizer.scale;
+//			
+//			[gestureRecognizer setScale:1];
+//			
+//			[(TextWidget*)piece applyScale:scale];
+//			
+//		}
+//		else{
 			[gestureRecognizer view].transform = CGAffineTransformScale([[gestureRecognizer view] transform], [gestureRecognizer scale], [gestureRecognizer scale]);
 			[gestureRecognizer setScale:1];
 			
-		}
+//		}
     }
 }
 
@@ -480,11 +480,11 @@ Abstract: MyView several subviews, each of which can be moved by gestures. Illus
  textwidget
  */
 - (void)menuLockPiece:(UIMenuController*)controller{
-	[(TextWidget*)selectedPiece setLockFlag:YES];
+//	[(TextWidget*)selectedPiece setLockFlag:YES];
 }
 
 - (void)menuUnlockPiece:(UIMenuController*)controller{
-	[(TextWidget*)selectedPiece setLockFlag:NO];
+//	[(TextWidget*)selectedPiece setLockFlag:NO];
 
 }
 

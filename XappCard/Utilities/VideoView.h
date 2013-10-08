@@ -10,7 +10,7 @@
 
 #import <MediaPlayer/MediaPlayer.h>
 
-#import "Controller.h"
+//#import "Controller.h"
 
 @protocol VideoViewDelegate;
 

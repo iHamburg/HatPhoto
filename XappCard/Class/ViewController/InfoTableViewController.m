@@ -16,12 +16,16 @@
 @end
 
 @implementation InfoTableViewController
-
+//
+//
+//- (void)loadView{
+//    
+////    self.vi
+//}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
 	
 	self.title = @"Info";
 	

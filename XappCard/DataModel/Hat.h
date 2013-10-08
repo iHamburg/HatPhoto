@@ -8,13 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum {
-	HatCategoryOthers
-}HatCategory;
+//typedef enum {
+//	HatCategoryOthers
+//}HatCategory;
 
 @interface Hat : NSObject
 
 @property (nonatomic, strong) NSString *imgName;
-@property (nonatomic, assign) HatCategory category;
+@property (nonatomic, strong) HatCategory *category;
 
 @end

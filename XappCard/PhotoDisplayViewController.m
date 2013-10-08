@@ -156,11 +156,10 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    CGFloat hCell;
-	
-	if (indexPath.section == 0) { // bg
-		hCell = isPad?80:54;
-	}
+    CGFloat hCell = isPad?80:54;
+//	if (indexPath.section == 0) { // bg
+//		hCell = isPad?80:54;
+//	}
   
 	return hCell;
 }

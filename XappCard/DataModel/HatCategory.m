@@ -32,15 +32,7 @@ NSString* const HatCategoryChildren = @"Children";
 		return self.numOfCovers;
 	}
 	else{
-		
-//		if([name isEqualToString:HatCategoryMen] || [name isEqualToString:HatCategoryWomen]
-//		   || [name isEqualToString:HatCategoryChildren] || [name isEqualToString:HatCategoryFunny]){
-//			
-//			//开放4个catgory
-//			return 10;
-//		}
-//		else
-//			return 10;
+
 		return available;
 	}
 	
@@ -48,7 +40,7 @@ NSString* const HatCategoryChildren = @"Children";
 
 
 - (id)initWithDictionary:(NSDictionary*)dict{
-	if (self == [super init]) {
+	if (self = [super init]) {
 		
 		self.name = dict[@"name"];
 		self.hatImgNames = [NSMutableArray arrayWithArray:dict[@"imgNames"]];

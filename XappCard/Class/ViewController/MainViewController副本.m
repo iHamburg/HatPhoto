@@ -48,14 +48,32 @@
 	_bottomToolbar.items = items;
 }
 
-- (void)loadPhotoContainer {
-    CGFloat yPhotoContainer = isPhoneRetina4?44:0;
-    
+- (void)loadView{
+	root = [RootViewController sharedInstance];
+	spriteManager = [SpriteManager sharedInstance];
+	
+	self.view = [[UIView alloc]initWithFrame:root.containerRect];
+	_w = self.view.width;
+	_h = self.view.height; // 436/524
+	_wHatV = 300;
+	
+	
+	self.view.backgroundColor = kDarkPatternColor;
+	self.title = kAppName;
+
+	_switchCameraB = [UIButton buttonWithFrame:CGRectMake(0, 0, 48, 30) title:nil image:[UIImage imageNamed:@"Icon_ToggleCamera.png"] target:self actcion:@selector(toolbarButtonClicked:)];
+	_switchCameraBB = [[UIBarButtonItem alloc]initWithCustomView:_switchCameraB];
+	self.navigationItem.rightBarButtonItem = _switchCameraBB;
+
+	_hatCategoryBB = [[UIBarButtonItem alloc]initWithTitle:@"Category" style:UIBarButtonItemStyleBordered target:self action:@selector(toolbarButtonClicked:)];
+	self.navigationItem.leftBarButtonItem = _hatCategoryBB;
+//	
+	
+	[self loadBottomToolbar];
+
+	CGFloat yPhotoContainer = isPhoneRetina4?44:0;
+
     // Photo
-    if (isIOS7) {
-        yPhotoContainer += 44;
-    }
-    
 	_photoContainer = [[UIView alloc]initWithFrame:CGRectMake(0, yPhotoContainer, 320, 320)];
     _photoContainer.layer.borderColor = kPhotoBorderColor.CGColor;
 	_photoContainer.layer.borderWidth = 5;
@@ -63,11 +81,11 @@
 	_photoContainer.layer.shadowOpacity = 1;
 	_photoContainer.layer.shadowOffset = isPad?CGSizeMake(2, 2):CGSizeMake(0, 2);
 	_photoContainer.layer.shadowPath = [UIBezierPath bezierPathWithRect:_photoContainer.bounds].CGPath;
-    
+
     _photoV = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, _w, 320)];
 	_photoV.contentMode = UIViewContentModeScaleAspectFit;
 	_photoV.backgroundColor = [UIColor blackColor];
-    
+
     
     _photoHatV = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, _wHatV, _wHatV)];
     _photoHatV.userInteractionEnabled = YES;
@@ -75,21 +93,12 @@
     [_photoContainer addSubview:_photoV];
     [_photoContainer addSubview:_photoHatV];
     
-}
-
-- (void)loadCameraContainer {
+    
     //Camera
-    
-    CGFloat yPhotoContainer = isPhoneRetina4?44:0;
-    
-    if (isIOS7) {
-        yPhotoContainer += 44;
-    }
-    
     _cameraContainer = [[UIView alloc]initWithFrame:CGRectMake(0, yPhotoContainer, 320, 320)];
     
     _avCamVC = [[AVCamViewController alloc]initWithNibName:@"AVCamViewController" bundle:nil];
-    
+
     _cameraScreenShotV = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 320, 320)];
     _cameraScreenShotV.layer.borderColor = kPhotoBorderColor.CGColor;
 	_cameraScreenShotV.layer.borderWidth = 5;
@@ -101,42 +110,10 @@
 	_hatV = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, _wHatV, _wHatV)];
 	_hatV.userInteractionEnabled = YES;
 	
-    
+
     [_cameraContainer addSubview:_avCamVC.view];
     [_cameraContainer addSubview:_cameraScreenShotV];
     [_cameraContainer addSubview:_hatV];
-}
-
-- (void)loadView{
-	root = [RootViewController sharedInstance];
-	spriteManager = [SpriteManager sharedInstance];
-	
-	self.view = [[UIView alloc]initWithFrame:root.containerRect];
-	_w = self.view.width;
-    _h = self.view.height; // 436/524
-	
-    _wHatV = 300;
-	
-	
-	self.view.backgroundColor = kDarkPatternColor;
-    
-	self.title = kAppName;
-
-	_switchCameraB = [UIButton buttonWithFrame:CGRectMake(0, 0, 48, 30) title:nil image:[UIImage imageNamed:@"Icon_ToggleCamera.png"] target:self actcion:@selector(toolbarButtonClicked:)];
-	_switchCameraBB = [[UIBarButtonItem alloc]initWithCustomView:_switchCameraB];
-	self.navigationItem.rightBarButtonItem = _switchCameraBB;
-
-	_hatCategoryBB = [[UIBarButtonItem alloc]initWithTitle:@"Category" style:UIBarButtonItemStyleBordered target:self action:@selector(toolbarButtonClicked:)];
-	self.navigationItem.leftBarButtonItem = _hatCategoryBB;
-
-	
-	
-
-	 
-    [self loadPhotoContainer];
-    
-    
-    [self loadCameraContainer];
     
 
      _controlV = [[MyView alloc]initWithFrame:CGRectZero];
@@ -144,28 +121,20 @@
     [_controlV addGestureRecognizersToPiece:_photoHatV];
 	
 	_categoryScrollView = [[HatCatScrollView alloc]initWithFrame:CGRectMake(0, CGRectGetMinY(_bottomToolbar.frame)-60, _w, 60) parent:self];
+	
 	_hatScrollView = [[HatScrollView alloc] initWithFrame:CGRectMake(0, CGRectGetMinY(_bottomToolbar.frame)-60, _w, 60) parent:self];
 	_hatScrollView.hidden = YES;
     
-    
-    
-    [self loadBottomToolbar];
+
 	
     [self.view addSubview:_photoContainer];
 	[self.view addSubview:_cameraContainer];
     [self.view addSubview:_controlV];
 	
-    NSLog(@"bottom # %@",_bottomToolbar);
-    if (isIOS7) {
-//        [_categoryScrollView setOrigin:CGPointMake(_categoryScrollView.frame.origin.x, _)]
-        [_categoryScrollView moveCenter:CGPointMake(0, 44)];
-        [_hatScrollView moveCenter:CGPointMake(0, 44)];
-        [_bottomToolbar moveCenter:CGPointMake(0, 44)];
-    }
-
-	    NSLog(@"bottom # %@",_bottomToolbar);
+	
 	[self.view addSubview:_categoryScrollView];
     [self.view addSubview:_hatScrollView];
+	
 	[self.view addSubview:_bottomToolbar];
 
     [self shake];
@@ -182,7 +151,6 @@
 - (void)viewWillAppear:(BOOL)animated{
 	[super viewWillAppear:animated];
 
-    L(); NSLog(@"bottom # %@",_bottomToolbar);
     
     //取消上次拍摄的screenshot
 	
@@ -196,9 +164,7 @@
 	
 	
 	[super viewDidAppear:animated];
-    
-    L();
-        NSLog(@"bottom # %@",_bottomToolbar);
+	
 	[self test];
 }
 
@@ -348,10 +314,9 @@
 
 
 - (void)didSelectedCategory:(HatCategory*)cat{
-	L();
-    
-    _hatCategory = cat;
+	_hatCategory = cat;
 	_hatScrollView.category = _hatCategory;
+	
 	
 	_categoryScrollView.hidden = YES;
     _hatScrollView.hidden = NO;
@@ -446,7 +411,7 @@
 		}
 		else{ // 720, 后置
 			
-			croppedPhoto = [UIImage imageWithCGImage:imageRef scale:2 orientation:UIImageOrientationRight];
+			croppedPhoto= [UIImage imageWithCGImage:imageRef scale:2 orientation:UIImageOrientationRight];
 		}
 		
         
@@ -459,8 +424,6 @@
 		img = UIGraphicsGetImageFromCurrentImageContext();
 		
 		UIGraphicsEndImageContext();
-        
-        CGImageRelease(imageRef);
 
     }
 	
@@ -472,9 +435,7 @@
 #pragma mark - ADView
 
 - (void)layoutBanner:(UIView*)banner loaded:(BOOL)loaded{
-	L();
-    NSLog(@"_h # %f, loaded # %d",_h,loaded);
-    
+	
 	[UIView animateWithDuration:0.25 animations:^{
 		
 		if (loaded) { // 从不显示到显示banner

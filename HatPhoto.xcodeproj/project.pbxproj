@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26DEEC8217FD1E6500AFAD92 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26DEEC8117FD1E6500AFAD92 /* Images.xcassets */; };
 		57DC754516A9CFCD0053BB16 /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 57DC754416A9CFCD0053BB16 /* ALAssetsLibrary+CustomPhotoAlbum.m */; };
 		AF08BB61161DFF750052B16D /* UIDevice+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = AF08BB5F161DFF750052B16D /* UIDevice+Extras.m */; };
 		AF0E336815A380070024A7B7 /* icon_clock.png in Resources */ = {isa = PBXBuildFile; fileRef = AF0E336715A380060024A7B7 /* icon_clock.png */; };
@@ -25,8 +26,6 @@
 		AF15B4A715B4A7F600892972 /* MMStopwatchARC.m in Sources */ = {isa = PBXBuildFile; fileRef = AF15B4A615B4A7F600892972 /* MMStopwatchARC.m */; };
 		AF17722414C1E99400477310 /* icon_mark.png in Resources */ = {isa = PBXBuildFile; fileRef = AF17722314C1E99400477310 /* icon_mark.png */; };
 		AF1FB8B216412B64007D4F25 /* CodingObj.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1FB8AD16412B64007D4F25 /* CodingObj.m */; };
-		AF1FB8B416412B64007D4F25 /* CodingText.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1FB8AF16412B64007D4F25 /* CodingText.m */; };
-		AF1FB8B616412B64007D4F25 /* TextWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1FB8B116412B64007D4F25 /* TextWidget.m */; };
 		AF1FB99D16416DDA007D4F25 /* WidgetComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1FB99C16416DDA007D4F25 /* WidgetComponent.m */; };
 		AF23531516AB032200421FE5 /* FrameScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF23531416AB032200421FE5 /* FrameScrollView.m */; };
 		AF23531816AB07F200421FE5 /* Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = AF23531716AB07F200421FE5 /* Frame.m */; };
@@ -56,7 +55,6 @@
 		AF2E8FE816C7ED6500861D05 /* VideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF373FBA1496C9C7000BD135 /* VideoView.m */; };
 		AF2E8FE916C7ED6500861D05 /* UIPopoverController+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC2688614A36B2600CDEB87 /* UIPopoverController+Extras.m */; };
 		AF2E8FEA16C7ED6500861D05 /* UIView+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC3297B14A9C8ED00F61B92 /* UIView+Extras.m */; };
-		AF2E8FEB16C7ED6500861D05 /* Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5B38EC14BE1C35004D8C74 /* Controller.m */; };
 		AF2E8FEC16C7ED6500861D05 /* AlbumLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCDC2EA14D98B7100BAC0DD /* AlbumLoader.m */; };
 		AF2E8FED16C7ED6500861D05 /* CustomBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AF34EA1514DB45E0004D747C /* CustomBarButtonItem.m */; };
 		AF2E8FEE16C7ED6500861D05 /* InstructionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDC82C214DC7F480085B61A /* InstructionViewController.m */; };
@@ -92,8 +90,6 @@
 		AF2E900C16C7ED6500861D05 /* UIColor+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9B55571603D54D00662F2F /* UIColor+Extras.m */; };
 		AF2E900D16C7ED6500861D05 /* UIDevice+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = AF08BB5F161DFF750052B16D /* UIDevice+Extras.m */; };
 		AF2E900E16C7ED6500861D05 /* CodingObj.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1FB8AD16412B64007D4F25 /* CodingObj.m */; };
-		AF2E900F16C7ED6500861D05 /* CodingText.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1FB8AF16412B64007D4F25 /* CodingText.m */; };
-		AF2E901016C7ED6500861D05 /* TextWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1FB8B116412B64007D4F25 /* TextWidget.m */; };
 		AF2E901116C7ED6500861D05 /* WidgetComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1FB99C16416DDA007D4F25 /* WidgetComponent.m */; };
 		AF2E901216C7ED6500861D05 /* HatCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3E600E169E0AB500474472 /* HatCategory.m */; };
 		AF2E901316C7ED6500861D05 /* FXLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3E6015169E1D0500474472 /* FXLabel.m */; };
@@ -533,7 +529,6 @@
 		AF56311216A8A6E4006259B2 /* appicon_tinykitchen.png in Resources */ = {isa = PBXBuildFile; fileRef = AF56310816A8A6E4006259B2 /* appicon_tinykitchen.png */; };
 		AF56311316A8A6E4006259B2 /* appicon_tinykitchen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF56310916A8A6E4006259B2 /* appicon_tinykitchen@2x.png */; };
 		AF5B38EA14BDE282004D8C74 /* Material.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF5B38E914BDE282004D8C74 /* Material.plist */; };
-		AF5B38ED14BE1C35004D8C74 /* Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5B38EC14BE1C35004D8C74 /* Controller.m */; };
 		AF5D530316AC12A0005719B7 /* Info_Email.png in Resources */ = {isa = PBXBuildFile; fileRef = AF5D52FF16AC129B005719B7 /* Info_Email.png */; };
 		AF5D530416AC12A0005719B7 /* Info_Facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = AF5D530016AC129C005719B7 /* Info_Facebook.png */; };
 		AF5D530516AC12A0005719B7 /* Info_Twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = AF5D530116AC129E005719B7 /* Info_Twitter.png */; };
@@ -879,7 +874,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5740BD3916B49DAA00CC18D9 /* HatPhoto copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "HatPhoto copy-Info.plist"; path = "/Users/xc/Public/WorkProject/InstaHat/Project/HatPhoto/HatPhoto copy-Info.plist"; sourceTree = "<absolute>"; };
+		26DD18A917FC39E0005CFC7C /* HatPhoto Pro copy-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "HatPhoto Pro copy-Info.plist"; sourceTree = "<group>"; };
+		26DEEC8117FD1E6500AFAD92 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "ShakeHat Pro/Images.xcassets"; sourceTree = "<group>"; };
 		57DC754316A9CFCD0053BB16 /* ALAssetsLibrary+CustomPhotoAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAssetsLibrary+CustomPhotoAlbum.h"; sourceTree = "<group>"; };
 		57DC754416A9CFCD0053BB16 /* ALAssetsLibrary+CustomPhotoAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAssetsLibrary+CustomPhotoAlbum.m"; sourceTree = "<group>"; };
 		AF08BB5F161DFF750052B16D /* UIDevice+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Extras.m"; sourceTree = "<group>"; };
@@ -915,10 +911,6 @@
 		AF17722314C1E99400477310 /* icon_mark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_mark.png; path = XappCard/Resources/icon_mark.png; sourceTree = SOURCE_ROOT; };
 		AF1FB8AC16412B64007D4F25 /* CodingObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CodingObj.h; path = CodingObj/CodingObj.h; sourceTree = "<group>"; };
 		AF1FB8AD16412B64007D4F25 /* CodingObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CodingObj.m; path = CodingObj/CodingObj.m; sourceTree = "<group>"; };
-		AF1FB8AE16412B64007D4F25 /* CodingText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CodingText.h; path = CodingObj/CodingText.h; sourceTree = "<group>"; };
-		AF1FB8AF16412B64007D4F25 /* CodingText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CodingText.m; path = CodingObj/CodingText.m; sourceTree = "<group>"; };
-		AF1FB8B016412B64007D4F25 /* TextWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextWidget.h; path = CodingObj/TextWidget.h; sourceTree = "<group>"; };
-		AF1FB8B116412B64007D4F25 /* TextWidget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextWidget.m; path = CodingObj/TextWidget.m; sourceTree = "<group>"; };
 		AF1FB99B16416DDA007D4F25 /* WidgetComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WidgetComponent.h; path = CodingObj/WidgetComponent.h; sourceTree = "<group>"; };
 		AF1FB99C16416DDA007D4F25 /* WidgetComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WidgetComponent.m; path = CodingObj/WidgetComponent.m; sourceTree = "<group>"; };
 		AF1FB9A016416E1E007D4F25 /* Protocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Protocols.h; sourceTree = "<group>"; };
@@ -939,7 +931,6 @@
 		AF2E8FCC16C79E4900861D05 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		AF2E8FCD16C79E4900861D05 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
 		AF2E918416C7ED6500861D05 /* ShakeHat_P.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShakeHat_P.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF2E918616C7ED6500861D05 /* HatPhoto Pro copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "HatPhoto Pro copy-Info.plist"; path = "/Users/appdevelopper/Public/WorkProject/HatPhoto/Project/HatPhoto/HatPhoto Pro copy-Info.plist"; sourceTree = "<absolute>"; };
 		AF2ED377159BD61300BFFB13 /* Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
 		AF2ED379159BD96400BFFB13 /* CodingObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodingObject.h; sourceTree = "<group>"; };
 		AF2ED37A159BD96400BFFB13 /* CodingObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodingObject.m; sourceTree = "<group>"; };
@@ -1029,8 +1020,6 @@
 		AF56310816A8A6E4006259B2 /* appicon_tinykitchen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appicon_tinykitchen.png; sourceTree = "<group>"; };
 		AF56310916A8A6E4006259B2 /* appicon_tinykitchen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appicon_tinykitchen@2x.png"; sourceTree = "<group>"; };
 		AF5B38E914BDE282004D8C74 /* Material.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Material.plist; sourceTree = "<group>"; };
-		AF5B38EB14BE1C35004D8C74 /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Controller.h; path = DataModel/Controller.h; sourceTree = "<group>"; };
-		AF5B38EC14BE1C35004D8C74 /* Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Controller.m; path = DataModel/Controller.m; sourceTree = "<group>"; };
 		AF5D52FF16AC129B005719B7 /* Info_Email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Info_Email.png; sourceTree = "<group>"; };
 		AF5D530016AC129C005719B7 /* Info_Facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Info_Facebook.png; sourceTree = "<group>"; };
 		AF5D530116AC129E005719B7 /* Info_Twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Info_Twitter.png; sourceTree = "<group>"; };
@@ -1420,7 +1409,6 @@
 		AFF25B8714F283060009CB6A /* ExportController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExportController.h; path = ../Utilities/ExportController.h; sourceTree = "<group>"; };
 		AFF25B8814F283060009CB6A /* ExportController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExportController.m; path = ../Utilities/ExportController.m; sourceTree = "<group>"; };
 		AFF42F741619C34D004347C1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../../../Default-568h@2x.png"; sourceTree = "<group>"; };
-		AFFF4AB015E4366E000A8F99 /* MyeCard Free copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MyeCard Free copy-Info.plist"; path = "/Users/appdevelopper/Public/WorkProject/MyeCard/Project/MyeCard/MyeCard Free copy-Info.plist"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2046,11 +2034,10 @@
 		AF8DB09A1480E97900C55084 = {
 			isa = PBXGroup;
 			children = (
+				26DEEC8117FD1E6500AFAD92 /* Images.xcassets */,
 				AF8DB0AF1480E97A00C55084 /* XappCard */,
 				AF8DB0A81480E97A00C55084 /* Frameworks */,
 				AF8DB0A61480E97A00C55084 /* Products */,
-				5740BD3916B49DAA00CC18D9 /* HatPhoto copy-Info.plist */,
-				AF2E918616C7ED6500861D05 /* HatPhoto Pro copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -2097,8 +2084,6 @@
 			children = (
 				AF8DB0B81480E97A00C55084 /* AppDelegate.h */,
 				AF8DB0B91480E97A00C55084 /* AppDelegate.m */,
-				AF5B38EB14BE1C35004D8C74 /* Controller.h */,
-				AF5B38EC14BE1C35004D8C74 /* Controller.m */,
 				AF8DB0BB1480E97A00C55084 /* RootViewController.h */,
 				AF8DB0BC1480E97A00C55084 /* RootViewController.m */,
 				AF6A5FF614B4FDE300972C27 /* Manager */,
@@ -2115,9 +2100,9 @@
 		AF8DB0B01480E97A00C55084 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				26DD18A917FC39E0005CFC7C /* HatPhoto Pro copy-Info.plist */,
 				AFD63FAB14861F2600F4AD86 /* TapkuLibrary.bundle */,
 				AF8DB0B11480E97A00C55084 /* HatPhoto-Info.plist */,
-				AFFF4AB015E4366E000A8F99 /* MyeCard Free copy-Info.plist */,
 				AF8DB0B21480E97A00C55084 /* InfoPlist.strings */,
 				AF8DB0B51480E97A00C55084 /* main.m */,
 				AF8DB0B71480E97A00C55084 /* XappCard-Prefix.pch */,
@@ -2367,10 +2352,6 @@
 				AF3E600E169E0AB500474472 /* HatCategory.m */,
 				AF1FB8AC16412B64007D4F25 /* CodingObj.h */,
 				AF1FB8AD16412B64007D4F25 /* CodingObj.m */,
-				AF1FB8AE16412B64007D4F25 /* CodingText.h */,
-				AF1FB8AF16412B64007D4F25 /* CodingText.m */,
-				AF1FB8B016412B64007D4F25 /* TextWidget.h */,
-				AF1FB8B116412B64007D4F25 /* TextWidget.m */,
 				AF1FB99B16416DDA007D4F25 /* WidgetComponent.h */,
 				AF1FB99C16416DDA007D4F25 /* WidgetComponent.m */,
 				AFD0E6F616A44EB900ADEAC8 /* Hat.h */,
@@ -2471,7 +2452,7 @@
 		AF8DB09C1480E97900C55084 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0500;
 			};
 			buildConfigurationList = AF8DB09F1480E97900C55084 /* Build configuration list for PBXProject "HatPhoto" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -2565,6 +2546,7 @@
 				AF2E907916C7ED6500861D05 /* icon_alignRight.png in Resources */,
 				AF2E907A16C7ED6500861D05 /* icon_alignCenter@2x.png in Resources */,
 				AF2E907B16C7ED6500861D05 /* icon_alignLeft@2x.png in Resources */,
+				26DEEC8217FD1E6500AFAD92 /* Images.xcassets in Resources */,
 				AF2E907C16C7ED6500861D05 /* icon_alignRight@2x.png in Resources */,
 				AF2E907D16C7ED6500861D05 /* BG_pattern_info.png in Resources */,
 				AF2E907E16C7ED6500861D05 /* appIcon_cityQuiz@2x~ipad.png in Resources */,
@@ -3163,7 +3145,6 @@
 				AF2E8FE816C7ED6500861D05 /* VideoView.m in Sources */,
 				AF2E8FE916C7ED6500861D05 /* UIPopoverController+Extras.m in Sources */,
 				AF2E8FEA16C7ED6500861D05 /* UIView+Extras.m in Sources */,
-				AF2E8FEB16C7ED6500861D05 /* Controller.m in Sources */,
 				AF2E8FEC16C7ED6500861D05 /* AlbumLoader.m in Sources */,
 				AF2E8FED16C7ED6500861D05 /* CustomBarButtonItem.m in Sources */,
 				AF2E8FEE16C7ED6500861D05 /* InstructionViewController.m in Sources */,
@@ -3199,8 +3180,6 @@
 				AF2E900C16C7ED6500861D05 /* UIColor+Extras.m in Sources */,
 				AF2E900D16C7ED6500861D05 /* UIDevice+Extras.m in Sources */,
 				AF2E900E16C7ED6500861D05 /* CodingObj.m in Sources */,
-				AF2E900F16C7ED6500861D05 /* CodingText.m in Sources */,
-				AF2E901016C7ED6500861D05 /* TextWidget.m in Sources */,
 				AF2E901116C7ED6500861D05 /* WidgetComponent.m in Sources */,
 				AF2E901216C7ED6500861D05 /* HatCategory.m in Sources */,
 				AF2E901316C7ED6500861D05 /* FXLabel.m in Sources */,
@@ -3261,7 +3240,6 @@
 				AF373FBC1496C9C7000BD135 /* VideoView.m in Sources */,
 				AFC2688714A36B2600CDEB87 /* UIPopoverController+Extras.m in Sources */,
 				AFC3297C14A9C8EE00F61B92 /* UIView+Extras.m in Sources */,
-				AF5B38ED14BE1C35004D8C74 /* Controller.m in Sources */,
 				AFCDC2EB14D98B7100BAC0DD /* AlbumLoader.m in Sources */,
 				AF34EA1614DB45E0004D747C /* CustomBarButtonItem.m in Sources */,
 				AFDC82C314DC7F490085B61A /* InstructionViewController.m in Sources */,
@@ -3297,8 +3275,6 @@
 				AF9B55581603D54D00662F2F /* UIColor+Extras.m in Sources */,
 				AF08BB61161DFF750052B16D /* UIDevice+Extras.m in Sources */,
 				AF1FB8B216412B64007D4F25 /* CodingObj.m in Sources */,
-				AF1FB8B416412B64007D4F25 /* CodingText.m in Sources */,
-				AF1FB8B616412B64007D4F25 /* TextWidget.m in Sources */,
 				AF1FB99D16416DDA007D4F25 /* WidgetComponent.m in Sources */,
 				AF3E600F169E0AB500474472 /* HatCategory.m in Sources */,
 				AF3E6016169E1D0500474472 /* FXLabel.m in Sources */,
@@ -3378,10 +3354,8 @@
 		AF2E918116C7ED6500861D05 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					armv6,
-					armv7,
-				);
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Xin Chen (2JS83C3H44)";
@@ -3395,12 +3369,13 @@
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_UNDECLARED_SELECTOR = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/**",
 					"$(SRCROOT)/XappCard/Tapku/src",
 					"Submodules/GPUImage/framework/**",
 				);
-				INFOPLIST_FILE = "HatPhoto Pro copy-Info.plist";
+				INFOPLIST_FILE = "XappCard/HatPhoto Pro copy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3423,10 +3398,8 @@
 		AF2E918216C7ED6500861D05 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					armv6,
-					armv7,
-				);
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Xin Chen";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Xin Chen";
@@ -3439,12 +3412,13 @@
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_UNDECLARED_SELECTOR = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/**",
 					"$(SRCROOT)/XappCard/Tapku/src",
 					"Submodules/GPUImage/framework/**",
 				);
-				INFOPLIST_FILE = "HatPhoto Pro copy-Info.plist";
+				INFOPLIST_FILE = "XappCard/HatPhoto Pro copy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3469,8 +3443,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -3485,11 +3460,15 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -3499,8 +3478,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -3508,9 +3488,12 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
@@ -3523,10 +3506,6 @@
 		AF8DB0C41480E97A00C55084 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					armv6,
-					armv7,
-				);
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Xin Chen (2JS83C3H44)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Xin Chen (2JS83C3H44)";
@@ -3536,6 +3515,7 @@
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_UNDECLARED_SELECTOR = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/**",
 					"$(SRCROOT)/XappCard/Tapku/src",
@@ -3565,10 +3545,6 @@
 		AF8DB0C51480E97A00C55084 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					armv6,
-					armv7,
-				);
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Xin Chen";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Xin Chen";
@@ -3578,6 +3554,7 @@
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_UNDECLARED_SELECTOR = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/**",
 					"$(SRCROOT)/XappCard/Tapku/src",

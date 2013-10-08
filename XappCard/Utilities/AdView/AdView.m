@@ -7,7 +7,7 @@
 //
 
 #import "AdView.h"
-#import "Controller.h"
+
 #import "RootViewController.h"
 
 @implementation AdView

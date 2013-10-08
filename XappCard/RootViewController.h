@@ -10,7 +10,7 @@
 
 
 #import <QuartzCore/QuartzCore.h>
-#import "Controller.h"
+
 #import "AdView.h"
 #import "InstructionViewController.h"
 
@@ -77,11 +77,11 @@ UIActionSheetDelegate,UIAlertViewDelegate,UINavigationControllerDelegate,Instruc
 - (void)checkVersion;
 - (void)preLoad;
 
-- (void)toMainVC;
+//- (void)toMainVC;
 
 - (void)toEffectVCWithImage:(UIImage*)pictureImg;
 - (void)toShareVCWithImage:(UIImage*)img;
-- (void)shareToMain;
+//- (void)shareToMain;
 
 - (void)toInstruction;
 - (void)toInfo;
