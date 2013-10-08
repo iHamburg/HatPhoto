@@ -87,7 +87,7 @@ CGFloat _hAdBanner;
 	imgPicker.allowsEditing = NO;
 	imgPicker.sourceType =  UIImagePickerControllerSourceTypePhotoLibrary;
 	
-	
+	//abc
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self
 											 selector:@selector(handleNotificationResignActive:)
