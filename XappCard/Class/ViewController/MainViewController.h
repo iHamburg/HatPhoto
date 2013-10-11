@@ -27,6 +27,7 @@
 	MyView *_controlV;
 	AVCamViewController *_avCamVC;
 	UIView *_cameraContainer, *_photoContainer;
+    UIView *scrollVContainer;
 	
 	UIActionSheet *_categorySheet;
 	
@@ -38,7 +39,9 @@
 	
 	HatCategory *_hatCategory;
 	
-	CGFloat _w,_h, _wHatV;
+	CGFloat  _wHatV;
+    CGFloat hBottomToolbar;
+    CGFloat hScrollView;
 }
 
 @property (nonatomic, strong) NSString *hatName;

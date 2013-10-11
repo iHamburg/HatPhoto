@@ -58,7 +58,7 @@
 					
 				}
 				dispatch_async(dispatch_get_main_queue(), ^{
-					NSLog(@"back to main queue");
+//					NSLog(@"back to main queue");
 					[self addSubview:imgV];
 				});
 				

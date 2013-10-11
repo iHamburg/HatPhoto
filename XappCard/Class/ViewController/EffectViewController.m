@@ -9,6 +9,7 @@
 #import "EffectViewController.h"
 #import "UIResponder+MotionRecognizers.h"
 
+
 @interface EffectViewController ()
 
 @end
@@ -32,23 +33,12 @@
 	
 }
 
-- (void)loadView{
-	root = [RootViewController sharedInstance];
-	
-    spriteManager = [SpriteManager sharedInstance];
-
-	
-	self.view = [[UIView alloc]initWithFrame:root.containerRect];
-	self.view.backgroundColor = kDarkPatternColor;
-
-	_w = self.view.width;
-	_h = self.view.height;
-
-	self.title = @"Effect";
-	
+- (void)loadImgContainer {
+    CGFloat yImgContainer = isPhoneRetina4?44:0;
+	if (isIOS7) {
+        yImgContainer +=44;
+    }
     
-	CGFloat yImgContainer = isPhoneRetina4?44:0;
-	
     _imgContainer = [[UIView alloc]initWithFrame:CGRectMake(0, yImgContainer, 320, 320)];
 	_imgContainer.layer.borderColor = kPhotoBorderColor.CGColor;
 	_imgContainer.layer.borderWidth = 5;
@@ -73,13 +63,10 @@
 	swipe = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(handleSwipe:)];
 	swipe.direction = UISwipeGestureRecognizerDirectionRight;
 	[_imgContainer addGestureRecognizer:swipe];
-	
-	
-	_shareBB = [[UIBarButtonItem alloc]initWithTitle:@"Share" style:UIBarButtonItemStyleBordered target:self action:@selector(buttonDidClicked:)];
-	self.navigationItem.rightBarButtonItem = _shareBB;
-	
-	
-	CGFloat yMarginButton = isPhoneRetina4?54:10;
+}
+
+- (void)loadButtonContainer {
+    CGFloat yMarginButton = isPhoneRetina4?54:10;
 	
 	_buttonContainer = [[UIView alloc]initWithFrame:CGRectMake(75, CGRectGetMaxY(_imgContainer.frame)+yMarginButton, 170, 32)];
 	_buttonContainer.backgroundColor = [UIColor viewFlipsideBackgroundColor];
@@ -103,8 +90,10 @@
 	[_buttonContainer addSubview:_buttonBGV];
 	[_buttonContainer addSubview:_functionB];
 	[_buttonContainer addSubview:_frameB];
-	
-	CGFloat hfunctionSV = 70;
+}
+
+- (void)loadScrollVContainer {
+    CGFloat hfunctionSV = 70;
 	
 	_scrollViewContainer = [[UIView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(_buttonContainer.frame)+3, _w, hfunctionSV)];
 	_functionScrollView = [[PhotoEditFunctionScrollView alloc]initWithFrame:_scrollViewContainer.bounds];
@@ -112,9 +101,37 @@
 	
 	_frameScrollView = [[FrameScrollView alloc]initWithFrame:_scrollViewContainer.bounds];
 	_frameScrollView.viewDelegate = self;
-
+    
 	[_scrollViewContainer addSubview:_frameScrollView];
 	[_scrollViewContainer addSubview:_functionScrollView];
+}
+
+- (void)loadView{
+	root = [RootViewController sharedInstance];
+	
+    spriteManager = [SpriteManager sharedInstance];
+    [self registerNotifications];
+	
+//	self.view = [[UIView alloc]initWithFrame:root.containerRect];
+//	self.view = [[UIView alloc]initWithFrame:_r];
+      self.view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, _w, isIOS7?_h:_h-44)];
+    
+	self.view.backgroundColor = kDarkPatternColor;
+
+
+	self.title = @"Effect";
+	
+    
+	[self loadImgContainer];
+	
+	
+	_shareBB = [[UIBarButtonItem alloc]initWithTitle:@"Share" style:UIBarButtonItemStyleBordered target:self action:@selector(buttonDidClicked:)];
+	self.navigationItem.rightBarButtonItem = _shareBB;
+	
+	
+	[self loadButtonContainer];
+	
+	[self loadScrollVContainer];
 	
 	
 	[self.view addSubview:_imgContainer];
@@ -162,6 +179,54 @@
 	
 //	_frameV.image = nil;
 }
+
+
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+#pragma mark - Notification
+
+- (void)registerNotifications{
+    
+    //
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(handleAdviewNotification:) name:NotificationAdChanged object:nil];
+    
+}
+
+- (void)handleAdviewNotification:(NSNotification*)notification{
+    [self layoutADBanner:notification.object];
+    
+}
+
+#pragma mark - Adview
+
+
+- (void)layoutADBanner:(AdView *)banner{
+    
+    L();
+    
+    
+    [UIView animateWithDuration:0.25 animations:^{
+        
+        if (banner.isAdDisplaying) { // 从不显示到显示banner
+            
+			[banner setOrigin:CGPointMake(0, _h - banner.height)];
+                [_scrollViewContainer setOrigin:CGPointMake(0, self.view.height - _scrollViewContainer.height - banner.height)];
+                [_buttonContainer setOrigin:CGPointMake(75, self.view.height - _scrollViewContainer.height - _buttonContainer.height - banner.height)];
+
+			[root.view addSubview:banner];
+		}
+		else{
+			[banner setOrigin:CGPointMake(0, _h)];
+
+            [_scrollViewContainer setOrigin:CGPointMake(0, self.view.height - _scrollViewContainer.height)];
+            [_buttonContainer setOrigin:CGPointMake(75, self.view.height - _scrollViewContainer.height - _buttonContainer.height)];
+		}
+		
+    }];
+    
+}
+
 
 #pragma mark - IBAction
 - (IBAction)buttonDidClicked:(id)sender{

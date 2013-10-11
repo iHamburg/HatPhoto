@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "RootViewController.h"
+#import "SpriteManager.h"
 
 @interface ShareViewController : UIViewController<UITableViewDataSource,UITableViewDelegate, UITextViewDelegate>{
 	RootViewController *root;
@@ -19,7 +20,7 @@
 	
 	NSArray *_tableKeys;
 	NSMutableArray *_tableImgs;
-	CGFloat _w, _h;
+//	CGFloat _w, _h;
     
     BOOL _isTextViewUnused;
 }

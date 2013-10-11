@@ -92,16 +92,16 @@
 
 
 
-#define STwitter @"via ShakeHat\nbit.ly/WCaT7P"  //TODO
+#define STwitter @"via InstaHat"  //TODO
 
 
-#define SSupportEmailTitle @"Feedback for ShakeHat"
+#define SSupportEmailTitle @"Feedback for InstaHat"
 
 
 // Facebook
 #define SFBCaption @"Try on new hats on your iPhone/iPod"
-#define SFBPostImageMsg @"via ShakeHat"
-#define SFBDescription @"Ever want to know what you’d look like in a Fedora? Fancy hat? Or cartoon hat for children or pets? With ShakeHat you can have different hats on your iPhone, add awesome photo effect or frame, and share to see what your friends think of the new look. "
+#define SFBPostImageMsg @"via InstaHat"
+#define SFBDescription @"Ever want to know what you’d look like in a Fedora? Fancy hat? Or cartoon hat for children or pets? With InstaHat you can have different hats on your iPhone, add awesome photo effect or frame, and share to see what your friends think of the new look. "
 
 
 //----------------- Export -------------------//

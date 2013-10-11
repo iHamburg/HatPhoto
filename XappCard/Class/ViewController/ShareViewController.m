@@ -33,11 +33,11 @@
 	self.view.backgroundColor = kLightGrayPatternColor;
 	
 	self.title = @"Share Photo";
+
 	
-    _w = self.view.width;
-	_h = self.view.height;
-	
-	UIView *shareContainer = [[UIView alloc]initWithFrame:CGRectMake(10, 10, 300, 100)];
+    
+    CGFloat yShareTextV = isIOS7?54:10;
+	UIView *shareContainer = [[UIView alloc]initWithFrame:CGRectMake(10, yShareTextV, 300, 100)];
 	shareContainer.backgroundColor = kShareLightGrayColor;
 	shareContainer.layer.cornerRadius = 10;
     [shareContainer addGestureRecognizer:[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(handleTap:)]];

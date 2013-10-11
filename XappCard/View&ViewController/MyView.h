@@ -46,8 +46,8 @@ Copyright (C) 2011 Apple Inc. All Rights Reserved.
 */
 
 #import <UIKit/UIKit.h>
-//#import "Controller.h"
 #import "Constant.h"
+
 
 @protocol GestureDelegate;
 

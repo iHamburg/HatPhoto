@@ -11,6 +11,7 @@
 #import "PhotoEditFunctionScrollView.h"
 #import "FrameScrollView.h"
 #import "GPUImage.h"
+#import "SpriteManager.h"
 
 @interface EffectViewController : UIViewController<PhotoEditFunctionScrollViewDelegate, FrameScrollViewDelegate>{
 	RootViewController *root;
@@ -27,7 +28,7 @@
 	
 	UIImage *_originalImage;
 	
-	CGFloat _w,_h;
+//	CGFloat _w,_h;
 	int _effectIndex, _frameIndex,_lastIndex;
 }
 

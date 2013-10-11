@@ -8,6 +8,7 @@
 
 #import "InstructionViewController.h"
 #import "RootViewController.h"
+#import "Utilities.h"
 
 @implementation InstructionViewController
 
@@ -42,9 +43,6 @@
 
 	CGFloat height = 480;
 	
-//	UIButton *quitB = [[UIButton alloc]initWithFrame:isPad?CGRectMake(50, 50, 50, 50):CGRectMake(25, 25, 25, 25)];
-//	[quitB setImage:[UIImage imageWithContentsOfFile:GetFullPath(@"pic/Instruction/Instruction_quit.png")] forState:UIControlStateNormal];
-//	[quitB addTarget:self action:@selector(quit:) forControlEvents:UIControlEventTouchUpInside];
 
 	NSArray *imgs = @[@"instruction1.jpg",@"instruction2.jpg",@"instruction3.jpg"];
 	

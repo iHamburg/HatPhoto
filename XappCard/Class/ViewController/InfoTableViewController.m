@@ -16,12 +16,7 @@
 @end
 
 @implementation InfoTableViewController
-//
-//
-//- (void)loadView{
-//    
-////    self.vi
-//}
+
 
 - (void)viewDidLoad
 {

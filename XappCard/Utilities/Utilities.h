@@ -15,8 +15,10 @@
 
 
 //#import "FBViewController.h" //Facebook
-#import "FlurryAnalytics.h"  //Flurry
+#import "Flurry.h"  //Flurry
 
+extern CGFloat _h,_w;
+extern CGRect _r;
 
 void saveArchived(id, NSString*);
 id loadArchived(NSString*);

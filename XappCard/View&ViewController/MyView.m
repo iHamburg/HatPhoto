@@ -9,10 +9,7 @@ Abstract: MyView several subviews, each of which can be moved by gestures. Illus
 
 
 #import "MyView.h"
-
-//#import "PictureWithFrameView.h"
-//#import "CardEditView.h"
-//#import "TextWidget.h"
+#import "Utilities.h"
 
 @interface MyView ()
 

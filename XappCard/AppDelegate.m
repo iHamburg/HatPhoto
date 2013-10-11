@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 
 #import "RootViewController.h"
-#import "FlurryAnalytics.h"
+#import "Flurry.h"
 
 #import "FacebookManager.h"
 #import "CPMotionRecognizingWindow.h"
@@ -21,7 +21,7 @@
 @synthesize facebook;
 
 static NSString *FLURRYFREEKEY = @"Q6F2JCSBVD9SXFZWC8GK";
-static NSString *ADMOBKEY = @"a1510e68ad9c726";
+//static NSString *ADMOBKEY = @"a1510e68ad9c726";
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -40,7 +40,7 @@ static NSString *ADMOBKEY = @"a1510e68ad9c726";
 //		flurryKey = FLURRYFREEKEY;
 //	}
 
-	[FlurryAnalytics startSession:FLURRYFREEKEY];  // 如果不是测试版本，激活flurry
+	[Flurry startSession:FLURRYFREEKEY];  // 如果不是测试版本，激活flurry
 	
 #endif
 	
@@ -79,7 +79,6 @@ static NSString *ADMOBKEY = @"a1510e68ad9c726";
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
 
-	NSLog(@"IS shakeHat # %d",isShakeHat());
 
     return YES;
 }
@@ -125,22 +124,14 @@ static NSString *ADMOBKEY = @"a1510e68ad9c726";
      */
 }
 //
-//- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification{
-//	L();
-//
-//	application.applicationIconBadgeNumber = notification.applicationIconBadgeNumber-1;
-//
-//	[self.viewController handleRemindNotification:notification];
-//    
-//
-//}
+
 
 - (NSUInteger)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window{
 	 return UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskLandscapeLeft | UIInterfaceOrientationMaskLandscapeRight; 
 }
 #pragma mark - Error Handlung
 void uncaughtExceptionHandler(NSException *exception) {
-    [FlurryAnalytics logError:@"Uncaught" message:@"Crash!" exception:exception];
+    [Flurry logError:@"Uncaught" message:@"Crash!" exception:exception];
 }
 
 

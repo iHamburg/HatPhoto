@@ -35,7 +35,7 @@ extern CGFloat _hAdBanner;
 @class InfoTableViewController;
 
 
-@interface RootViewController : UIViewController< AdViewDelegate, UIImagePickerControllerDelegate,
+@interface RootViewController : UIViewController< UIImagePickerControllerDelegate,
 UIActionSheetDelegate,UIAlertViewDelegate,UINavigationControllerDelegate,InstructionDelegate>{
 
 	UIImagePickerController *imgPicker;
@@ -90,7 +90,7 @@ UIActionSheetDelegate,UIAlertViewDelegate,UINavigationControllerDelegate,Instruc
 
 - (void)didTakePicture:(UIImage*)pictureImg;
 
-- (void)initBanner;
+//- (void)initBanner;
 //- (void)closeBanner;
 
 

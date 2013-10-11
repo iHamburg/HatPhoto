@@ -24,10 +24,13 @@
 @synthesize hatName;
 
 - (void)loadBottomToolbar{
-    CGFloat hBottomToolbar = isPhoneRetina4?50:44;
-	_bottomToolbar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, _h-hBottomToolbar, _w, hBottomToolbar)];
-	_bottomToolbar.barStyle = UIBarStyleBlack;
     
+	 hBottomToolbar = 44;
+
+    _bottomToolbar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, self.view.height - hBottomToolbar, _w, hBottomToolbar)];
+	_bottomToolbar.barStyle = UIBarStyleBlack;
+//    NSLog(@"main # %@, bottom # %@",self.view,_bottomToolbar);
+
     
 	_photoPickerB = [UIButton buttonWithFrame:CGRectMake(0, 0, 32, 32) title:nil image:[UIImage imageNamed:@"Icon_PhotoLibrary.png"] target:self actcion:@selector(toolbarButtonClicked:)];
 	_photoPickerBB = [[UIBarButtonItem alloc]initWithCustomView:_photoPickerB];
@@ -63,6 +66,7 @@
 	_photoContainer.layer.shadowOpacity = 1;
 	_photoContainer.layer.shadowOffset = isPad?CGSizeMake(2, 2):CGSizeMake(0, 2);
 	_photoContainer.layer.shadowPath = [UIBezierPath bezierPathWithRect:_photoContainer.bounds].CGPath;
+    _photoContainer.layer.masksToBounds = YES;
     
     _photoV = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, _w, 320)];
 	_photoV.contentMode = UIViewContentModeScaleAspectFit;
@@ -87,6 +91,7 @@
     }
     
     _cameraContainer = [[UIView alloc]initWithFrame:CGRectMake(0, yPhotoContainer, 320, 320)];
+    _cameraContainer.layer.masksToBounds = YES;
     
     _avCamVC = [[AVCamViewController alloc]initWithNibName:@"AVCamViewController" bundle:nil];
     
@@ -107,13 +112,26 @@
     [_cameraContainer addSubview:_hatV];
 }
 
+
+- (void)loadScrollV {
+    
+    hScrollView = 60;
+    scrollVContainer = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMinY(_bottomToolbar.frame) - hScrollView, _w, hScrollView)];
+	_categoryScrollView = [[HatCatScrollView alloc]initWithFrame:CGRectMake(0, 0, _w, hScrollView) parent:self];
+	_hatScrollView = [[HatScrollView alloc] initWithFrame:CGRectMake(0, 0, _w, hScrollView) parent:self];
+	_hatScrollView.hidden = YES;
+    
+    [scrollVContainer addSubview:_hatScrollView];
+    [scrollVContainer addSubview:_categoryScrollView];
+}
+
+// 436/524
 - (void)loadView{
 	root = [RootViewController sharedInstance];
 	spriteManager = [SpriteManager sharedInstance];
-	
-	self.view = [[UIView alloc]initWithFrame:root.containerRect];
-	_w = self.view.width;
-    _h = self.view.height; // 436/524
+	[self registerNotifications];
+    
+    self.view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, _w, isIOS7?_h:_h-44)];
 	
     _wHatV = 300;
 	
@@ -129,43 +147,27 @@
 	_hatCategoryBB = [[UIBarButtonItem alloc]initWithTitle:@"Category" style:UIBarButtonItemStyleBordered target:self action:@selector(toolbarButtonClicked:)];
 	self.navigationItem.leftBarButtonItem = _hatCategoryBB;
 
-	
-	
-
-	 
     [self loadPhotoContainer];
     
     
     [self loadCameraContainer];
     
-
+    
+   
      _controlV = [[MyView alloc]initWithFrame:CGRectZero];
 	[_controlV addGestureRecognizersToPiece:_hatV];
     [_controlV addGestureRecognizersToPiece:_photoHatV];
 	
-	_categoryScrollView = [[HatCatScrollView alloc]initWithFrame:CGRectMake(0, CGRectGetMinY(_bottomToolbar.frame)-60, _w, 60) parent:self];
-	_hatScrollView = [[HatScrollView alloc] initWithFrame:CGRectMake(0, CGRectGetMinY(_bottomToolbar.frame)-60, _w, 60) parent:self];
-	_hatScrollView.hidden = YES;
-    
-    
-    
     [self loadBottomToolbar];
+
+    [self loadScrollV];
+    
+    
 	
     [self.view addSubview:_photoContainer];
 	[self.view addSubview:_cameraContainer];
     [self.view addSubview:_controlV];
-	
-    NSLog(@"bottom # %@",_bottomToolbar);
-    if (isIOS7) {
-//        [_categoryScrollView setOrigin:CGPointMake(_categoryScrollView.frame.origin.x, _)]
-        [_categoryScrollView moveCenter:CGPointMake(0, 44)];
-        [_hatScrollView moveCenter:CGPointMake(0, 44)];
-        [_bottomToolbar moveCenter:CGPointMake(0, 44)];
-    }
-
-	    NSLog(@"bottom # %@",_bottomToolbar);
-	[self.view addSubview:_categoryScrollView];
-    [self.view addSubview:_hatScrollView];
+    [self.view addSubview:scrollVContainer];
 	[self.view addSubview:_bottomToolbar];
 
     [self shake];
@@ -182,7 +184,8 @@
 - (void)viewWillAppear:(BOOL)animated{
 	[super viewWillAppear:animated];
 
-    L(); NSLog(@"bottom # %@",_bottomToolbar);
+    L();
+    NSLog(@"bottom # %@",_bottomToolbar);
     
     //取消上次拍摄的screenshot
 	
@@ -198,7 +201,9 @@
 	[super viewDidAppear:animated];
     
     L();
-        NSLog(@"bottom # %@",_bottomToolbar);
+        NSLog(@"main # %@, bottom # %@",self.view,_bottomToolbar);
+    
+//    NSLog(@"hatcategory # %@",_categoryScrollView);
 	[self test];
 }
 
@@ -207,6 +212,51 @@
 	
 	[self removeMotionRecognizer];
 
+}
+
+
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+#pragma mark - Notification
+
+- (void)registerNotifications{
+    
+    //
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(handleAdviewNotification:) name:NotificationAdChanged object:nil];
+    
+}
+
+- (void)handleAdviewNotification:(NSNotification*)notification{
+    [self layoutADBanner:notification.object];
+    
+}
+
+#pragma mark - Adview
+
+
+- (void)layoutADBanner:(AdView *)banner{
+    
+    L();
+    
+    
+    [UIView animateWithDuration:0.25 animations:^{
+		
+		if (banner.isAdDisplaying) { // 从不显示到显示banner
+            
+			[banner setOrigin:CGPointMake(0, _h - banner.height)];
+            [_bottomToolbar setOrigin:CGPointMake(0, self.view.height - hBottomToolbar - banner.height)];
+            [scrollVContainer setOrigin:CGPointMake(0, self.view.height - hBottomToolbar - hScrollView - banner.height)];
+			[root.view addSubview:banner];
+		}
+		else{
+			[banner setOrigin:CGPointMake(0, _h)];
+            [_bottomToolbar setOrigin:CGPointMake(0, self.view.height - hBottomToolbar)];
+            [scrollVContainer setOrigin:CGPointMake(0, self.view.height - hBottomToolbar - hScrollView)];
+		}
+		
+    }];
+    
 }
 
 

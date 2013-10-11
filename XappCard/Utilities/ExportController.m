@@ -211,7 +211,7 @@
 
 - (void)shareImage:(UIImage*)img text:(NSString*)text type:(ShareType)type{
     NSString *shareType = @"Unknown Share";
-	NSString *twitterText = [text stringByAppendingFormat:@"\nvia ShakeHat - Try on new Hats. %@",kAppShortLink];
+	NSString *twitterText = [text stringByAppendingFormat:@"\nvia InstaHat - Try on new Hats. %@",kApplink];
 	if (type == ShareToAlbum) {
 		shareType = @"Album";
 
@@ -235,11 +235,11 @@
 	else if (type == ShareToEmail){
 		shareType = @"Email";
 		NSData *contentData = UIImageJPEGRepresentation(img , kJPEGCompressionQuality);
-        NSString *twitterText = [text stringByAppendingFormat:@"\nvia ShakeHat. %@",kAppShortLink];
+        NSString *twitterText = [text stringByAppendingFormat:@"\nvia InstaHat. %@",kApplink];
 		NSDictionary *info = [NSDictionary dictionaryWithObjectsAndKeys:
 							  SShareImageEmailSubject, @"subject",
 							  twitterText,@"emailBody",
-							  [NSArray arrayWithObjects:contentData,@"image/jpeg",@"ShakeHat.jpg", nil], @"attachment",
+							  [NSArray arrayWithObjects:contentData,@"image/jpeg",@"InstaHat.jpg", nil], @"attachment",
 							  nil];
 		
 		[[ExportController sharedInstance] sendEmail:info];
@@ -262,7 +262,7 @@
 	@"Hatname" : hatName
 	};
 	
-	[FlurryAnalytics logEvent:@"Share Photo" withParameters:dict];
+	[Flurry logEvent:@"Share Photo" withParameters:dict];
 
 
 }

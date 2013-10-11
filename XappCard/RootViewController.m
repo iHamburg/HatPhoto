@@ -46,7 +46,9 @@ CGFloat _hAdBanner;
 	w = r.size.width;
 	h = r.size.height;
 	
-	_hAdBanner = 50;
+	_r =  [UIScreen mainScreen].bounds;
+    _w = _r.size.width;
+    _h = _r.size.height;
 	
 	self.view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, w, h)];
 
@@ -104,12 +106,8 @@ CGFloat _hAdBanner;
 	_effectVC = [[EffectViewController alloc]init];
 	_effectVC.view.alpha = 1;
 
-	[self initBanner];
-	
-	
-//	NSLog(@"resolution # %d, isphone5 # %d",[UIDevice resolution],isPhoneRetina4);
 
-	
+	[AdView sharedInstance];
 }
 
 
@@ -121,7 +119,6 @@ CGFloat _hAdBanner;
 
 	if (firstLoadFlag) {
 		firstLoadFlag = NO;
-
 	}
 	
 	[self test];
@@ -229,7 +226,7 @@ CGFloat _hAdBanner;
 
 - (void)toEffectVCWithImage:(UIImage*)pictureImg{
 	L();
-//	NSLog(@"img # %@",NSStringFromCGSize(pictureImg.size)); 
+
 	
 	if (!_effectVC) {
 		_effectVC = [[EffectViewController alloc]init];
@@ -335,7 +332,8 @@ CGFloat _hAdBanner;
 	
 	// ads
 
-	[self initBanner];
+    [AdView releaseSharedInstance];
+//	[self initBanner];
 	
 	// hat
 	[_mainVC applyCategory];
@@ -346,61 +344,11 @@ CGFloat _hAdBanner;
 	
 	// ads
 
-	[self initBanner];
-	
+//	[self initBanner];
+    [AdView releaseSharedInstance];	
 	
 	// hat
 	[_mainVC applyCategory];
-}
-
-
-#pragma mark - Banner
-
-/**
- 
- 如果是iphone4， 只在share时才init
- */
-
-
-
-#pragma mark - AdView
-
-- (void)initBanner{
-	
-	//
-	if (isPaid() || isIAPFullVersion) {
-		
-		[_mainVC layoutBanner:_adContainer loaded:NO];
-		[_effectVC layoutBanner:_adContainer loaded:NO];
-
-		
-		[_adContainer removeFromSuperview];
-		_adContainer.delegate = nil;
-		_adContainer = nil;
-	}
-	else{
-		if (!_adContainer) {
-			_adContainer = [[AdView alloc]initWithFrame:CGRectMake(0, h, w, _hAdBanner)];
-			_adContainer.delegate = self;
-		}
-	
-		
-		if (_instructionVC.view.superview) {
-			[self.view insertSubview:_adContainer belowSubview:_instructionVC.view];
-		}
-		else{
-			[self.view addSubview:_adContainer];
-		}
-		
-		
-	}
-}
-
-- (void)layoutBanner:(BOOL)loaded{
-	
-	[_mainVC layoutBanner:_adContainer loaded:loaded];
-	[_effectVC layoutBanner:_adContainer loaded:loaded];
-	[_shareVC layoutBanner:_adContainer loaded:loaded];
 }
 
 
@@ -411,6 +359,8 @@ CGFloat _hAdBanner;
 - (void)test{
 
 //	[[ExportController sharedInstance]showRateAlert];
+    
+//    [self toEffectVCWithImage:[UIImage imageNamed:@"placeholder.jpg"]];
 	
 }
 

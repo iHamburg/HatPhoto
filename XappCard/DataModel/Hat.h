@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "HatCategory.h"
 //typedef enum {
 //	HatCategoryOthers
 //}HatCategory;

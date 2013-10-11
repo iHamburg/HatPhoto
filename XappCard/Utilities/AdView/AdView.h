@@ -7,32 +7,25 @@
 //
 
 #import <UIKit/UIKit.h>
-
 #import <iAd/iAd.h>
 #import "GADBannerView.h"
 
-@protocol AdViewDelegate;
+#define kKeyPathAdDisplaying @"isAdDisplaying"
 
+extern NSString *const NotificationAdChanged;
 
 @interface AdView : UIView<GADBannerViewDelegate,ADBannerViewDelegate>{
 	
 	ADBannerView *_iadView;
 	GADBannerView *_gadView;
-	
+
 }
 
-@property (nonatomic, unsafe_unretained) id<AdViewDelegate> delegate;
++(id)sharedInstance;
++(void)releaseSharedInstance;
 
-- (BOOL)bannerLoaded;
-- (void)setupIAD;
-- (void)setupGAD;
+@property (nonatomic, assign) BOOL isAdDisplaying;
+
 
 @end
 
-
-
-@protocol AdViewDelegate <NSObject>
-
-- (void)layoutBanner:(BOOL)loaded;
-
-@end

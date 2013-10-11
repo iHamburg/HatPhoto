@@ -12,22 +12,22 @@
 
 #ifdef PAID  //  paid
 
-	#define kAppID @"601940277"
-	#define kApplink @"http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=601940277&mt=8"
+	#define kAppID @"597154228"
+	#define kApplink @"https://itunes.apple.com/de/app/instahat-pro/id597154228?l=en&mt=8"
 
 #else   // free
 
 
 
-	#define kAppID @"605339875"
-	#define kApplink @"http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=605339875&mt=8"
+	#define kAppID @"594492123"
+	#define kApplink @"https://itunes.apple.com/de/app/instahat/id594492123?l=en&mt=8"
 
 #endif
 
 
-#define kAppName @"ShakeHat"
-#define kAppShortLink @"bit.ly/XiMF52"
-#define kIAPFullVersion @"de.xappsoft.shakehatfree.fullversion"
+#define kAppName @"InstaHat"
+//#define kAppShortLink @"bit.ly/XiMF52"
+#define kIAPFullVersion @"de.xappsoft.hatbooth.fullversion"
 
 #pragma mark - UI
 
