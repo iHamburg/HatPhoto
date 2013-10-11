@@ -7,10 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-
-#import <QuartzCore/QuartzCore.h>
-
+#import "PRootViewController.h"
 #import "AdView.h"
 #import "InstructionViewController.h"
 
@@ -35,7 +32,7 @@ extern CGFloat _hAdBanner;
 @class InfoTableViewController;
 
 
-@interface RootViewController : UIViewController< UIImagePickerControllerDelegate,
+@interface IHRootViewController : UIViewController< UIImagePickerControllerDelegate,
 UIActionSheetDelegate,UIAlertViewDelegate,UINavigationControllerDelegate,InstructionDelegate>{
 
 	UIImagePickerController *imgPicker;
@@ -77,7 +74,6 @@ UIActionSheetDelegate,UIAlertViewDelegate,UINavigationControllerDelegate,Instruc
 - (void)checkVersion;
 - (void)preLoad;
 
-//- (void)toMainVC;
 
 - (void)toEffectVCWithImage:(UIImage*)pictureImg;
 - (void)toShareVCWithImage:(UIImage*)img;
@@ -89,11 +85,6 @@ UIActionSheetDelegate,UIAlertViewDelegate,UINavigationControllerDelegate,Instruc
 
 
 - (void)didTakePicture:(UIImage*)pictureImg;
-
-//- (void)initBanner;
-//- (void)closeBanner;
-
-
 
 - (void)IAPDidFinished:(NSString*)identifier;
 - (void)IAPDidRestored;

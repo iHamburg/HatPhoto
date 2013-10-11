@@ -6,7 +6,7 @@
 //  Copyright (c) 2011 Xappsoft. All rights reserved.
 //
 
-#import "RootViewController.h"
+#import "IHRootViewController.h"
 #import "MainViewController.h"
 #import "EffectViewController.h"
 #import "ShareViewController.h"
@@ -14,7 +14,7 @@
 
 
 
-@implementation RootViewController
+@implementation IHRootViewController
 
 @synthesize r,containerSize,containerRect;
 
@@ -29,7 +29,7 @@ CGFloat _hAdBanner;
 	static id sharedInstance;
 	if (sharedInstance == nil) {
 
-		sharedInstance = [[RootViewController alloc]init];
+		sharedInstance = [[IHRootViewController alloc]init];
 		
 	}
 	

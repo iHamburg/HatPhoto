@@ -26,7 +26,7 @@
 
 - (void)loadView{
 	
-	root = [RootViewController sharedInstance];
+	root = [IHRootViewController sharedInstance];
 	spriteManager = [SpriteManager sharedInstance];
 	
 	self.view = [[UIView alloc] initWithFrame:root.containerRect];

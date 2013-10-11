@@ -7,7 +7,7 @@
 //
 
 #import "ExportController.h"
-#import "RootViewController.h"
+#import "IHRootViewController.h"
 #import "Info2ViewController.h"
 #import "FacebookManager.h"
 #import "ALAssetsLibrary+CustomPhotoAlbum.h"
@@ -119,7 +119,7 @@
 	}
 	
 	
-	[[RootViewController sharedInstance] presentModalViewController:mailPicker animated:NO];
+	[[IHRootViewController sharedInstance] presentModalViewController:mailPicker animated:NO];
 }
 
 - (void)mailComposeController:(MFMailComposeViewController *)controller
@@ -180,12 +180,12 @@
 //                break;
 //        }
 		
-        [[RootViewController sharedInstance] dismissModalViewControllerAnimated:YES];
+        [[IHRootViewController sharedInstance] dismissModalViewControllerAnimated:YES];
 
     }];
     
     // Present the tweet composition view controller modally.
-    [[RootViewController sharedInstance] presentModalViewController:tweetViewController animated:YES];
+    [[IHRootViewController sharedInstance] presentModalViewController:tweetViewController animated:YES];
 
 }
 #pragma mark - Rate
@@ -215,14 +215,14 @@
 	if (type == ShareToAlbum) {
 		shareType = @"Album";
 
-		[[LoadingView sharedLoadingView]addInView:[[RootViewController sharedInstance] view]];
+		[[LoadingView sharedLoadingView]addInView:[[IHRootViewController sharedInstance] view]];
 		
 		[self saveImageInAlbum:img];
 	}
 	else if (type == ShareToFacebook){
 		shareType = @"Facebook";
 		// 不发到墙上而是直接发到照片中
-		[[LoadingView sharedLoadingView]addInView:[[RootViewController sharedInstance]view]];
+		[[LoadingView sharedLoadingView]addInView:[[IHRootViewController sharedInstance]view]];
 
         [[FacebookManager sharedInstance]postImage:img text:twitterText];
 		
@@ -252,7 +252,7 @@
         [self sharePhotoWithInstagram:instagramName text:twitterText];
     }
 	
-	NSString *hatName = [[RootViewController sharedInstance] hatName];
+	NSString *hatName = [[IHRootViewController sharedInstance] hatName];
 	if (ISEMPTY(hatName)) {
 		hatName = @"Without Hat";
 	}
@@ -278,10 +278,10 @@
 	[library saveImage:img toAlbum:kAppName withCompletionBlock:^(NSError *error){
 		//            NSLog(@"saved!");
 		if (!error) {
-			[[LoadingView sharedLoadingView]addTitle:@"Saved!" inView:[[RootViewController sharedInstance]view]];
+			[[LoadingView sharedLoadingView]addTitle:@"Saved!" inView:[[IHRootViewController sharedInstance]view]];
 		}else{
 			NSLog(@"error # %@",[error description]);
-			[[LoadingView sharedLoadingView]addTitle:@"Please try it again later." inView:[[RootViewController sharedInstance]view]];
+			[[LoadingView sharedLoadingView]addTitle:@"Please try it again later." inView:[[IHRootViewController sharedInstance]view]];
 		}
 	}];
 
@@ -306,7 +306,7 @@
 	
 	
     [documentController presentOpenInMenuFromRect:CGRectZero
-										   inView:[[RootViewController sharedInstance]view]
+										   inView:[[IHRootViewController sharedInstance]view]
 										 animated:YES];
 	
 	

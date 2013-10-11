@@ -7,7 +7,7 @@
 //
 
 #import "FacebookManager.h"
-#import "RootViewController.h"
+#import "IHRootViewController.h"
 #import "AppDelegate.h"
 
 
@@ -160,7 +160,7 @@
 	
 	// 不一定要返回信号
 	//	[[LoadingView sharedLoadingView]addTitle:@"Sent !" inView:[[ViewController sharedInstance]view]];
-	[[LoadingView sharedLoadingView]addTitle:@"Uploaded!" inView:[[RootViewController sharedInstance]view]];
+	[[LoadingView sharedLoadingView]addTitle:@"Uploaded!" inView:[[IHRootViewController sharedInstance]view]];
 }
 
 #pragma mark - FBRequestDelegate Methods
@@ -253,7 +253,7 @@
 	// post image
 	NSRange range = [requestStr rangeOfString:@"me/photos"];
 	if (range.location!=NSNotFound) {
-			[[LoadingView sharedLoadingView]addTitle:@"Uploaded!" inView:[[RootViewController sharedInstance]view]];
+			[[LoadingView sharedLoadingView]addTitle:@"Uploaded!" inView:[[IHRootViewController sharedInstance]view]];
 		return;
 	}
 	
@@ -331,7 +331,7 @@
 	numOfPhotsToUpload --;
 	if (numOfPhotsToUpload <= 0) {
 //		[[LoadingView sharedLoadingView]removeView];
-		[[LoadingView sharedLoadingView]addTitle:@"Uploaded!" inView:[[RootViewController sharedInstance]view]];
+		[[LoadingView sharedLoadingView]addTitle:@"Uploaded!" inView:[[IHRootViewController sharedInstance]view]];
 	}
 }
 

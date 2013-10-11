@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		260DC2AB1807D32100E7CADA /* LRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 260DC2A61807D32100E7CADA /* LRootViewController.m */; };
+		260DC2AC1807D32100E7CADA /* LRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 260DC2A61807D32100E7CADA /* LRootViewController.m */; };
+		260DC2AD1807D32100E7CADA /* PRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 260DC2A81807D32100E7CADA /* PRootViewController.m */; };
+		260DC2AE1807D32100E7CADA /* PRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 260DC2A81807D32100E7CADA /* PRootViewController.m */; };
+		260DC2AF1807D32100E7CADA /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 260DC2AA1807D32100E7CADA /* RootViewController.m */; };
+		260DC2B01807D32100E7CADA /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 260DC2AA1807D32100E7CADA /* RootViewController.m */; };
 		26DEEC8217FD1E6500AFAD92 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26DEEC8117FD1E6500AFAD92 /* Images.xcassets */; };
 		26F3F3961806EE2B004FC419 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26DEEC8117FD1E6500AFAD92 /* Images.xcassets */; };
 		26F3F39A1806F934004FC419 /* libFlurry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 26F3F3991806F934004FC419 /* libFlurry.a */; };
@@ -46,7 +52,7 @@
 		AF2E8FD016C79E4900861D05 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF2E8FCD16C79E4900861D05 /* Icon-72@2x.png */; };
 		AF2E8FDB16C7ED6500861D05 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8DB0B51480E97A00C55084 /* main.m */; };
 		AF2E8FDC16C7ED6500861D05 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8DB0B91480E97A00C55084 /* AppDelegate.m */; };
-		AF2E8FDD16C7ED6500861D05 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8DB0BC1480E97A00C55084 /* RootViewController.m */; };
+		AF2E8FDD16C7ED6500861D05 /* IHRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8DB0BC1480E97A00C55084 /* IHRootViewController.m */; };
 		AF2E8FDE16C7ED6500861D05 /* NSString+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC9842B1486D2C1004E3B02 /* NSString+Extras.m */; };
 		AF2E8FDF16C7ED6500861D05 /* UIAlertView+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC9842D1486D2C1004E3B02 /* UIAlertView+Extras.m */; };
 		AF2E8FE016C7ED6500861D05 /* UIImage+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC9842F1486D2C1004E3B02 /* UIImage+Extras.m */; };
@@ -765,7 +771,7 @@
 		AF8DB0B41480E97A00C55084 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF8DB0B21480E97A00C55084 /* InfoPlist.strings */; };
 		AF8DB0B61480E97A00C55084 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8DB0B51480E97A00C55084 /* main.m */; };
 		AF8DB0BA1480E97A00C55084 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8DB0B91480E97A00C55084 /* AppDelegate.m */; };
-		AF8DB0BD1480E97A00C55084 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8DB0BC1480E97A00C55084 /* RootViewController.m */; };
+		AF8DB0BD1480E97A00C55084 /* IHRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8DB0BC1480E97A00C55084 /* IHRootViewController.m */; };
 		AF96FE1C16B84CA700CB2455 /* frame_0.png in Resources */ = {isa = PBXBuildFile; fileRef = AF96FE1B16B84CA700CB2455 /* frame_0.png */; };
 		AF9A23C8158BE8C0001CF935 /* FBDialog.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AF9A23C7158BE8C0001CF935 /* FBDialog.bundle */; };
 		AF9B55581603D54D00662F2F /* UIColor+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9B55571603D54D00662F2F /* UIColor+Extras.m */; };
@@ -873,6 +879,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		260DC2A51807D32100E7CADA /* LRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRootViewController.h; sourceTree = "<group>"; };
+		260DC2A61807D32100E7CADA /* LRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRootViewController.m; sourceTree = "<group>"; };
+		260DC2A71807D32100E7CADA /* PRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRootViewController.h; sourceTree = "<group>"; };
+		260DC2A81807D32100E7CADA /* PRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRootViewController.m; sourceTree = "<group>"; };
+		260DC2A91807D32100E7CADA /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		260DC2AA1807D32100E7CADA /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		26DD18A917FC39E0005CFC7C /* InstaHat Pro copy-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "InstaHat Pro copy-Info.plist"; sourceTree = "<group>"; };
 		26DEEC8117FD1E6500AFAD92 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "../../ShakeHat Pro/Images.xcassets"; sourceTree = "<group>"; };
 		26F3F3981806F934004FC419 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
@@ -1270,8 +1282,8 @@
 		AF8DB0B71480E97A00C55084 /* XappCard-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XappCard-Prefix.pch"; sourceTree = "<group>"; };
 		AF8DB0B81480E97A00C55084 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AF8DB0B91480E97A00C55084 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AF8DB0BB1480E97A00C55084 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		AF8DB0BC1480E97A00C55084 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		AF8DB0BB1480E97A00C55084 /* IHRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IHRootViewController.h; sourceTree = "<group>"; };
+		AF8DB0BC1480E97A00C55084 /* IHRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IHRootViewController.m; sourceTree = "<group>"; };
 		AF96FE1B16B84CA700CB2455 /* frame_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame_0.png; sourceTree = "<group>"; };
 		AF9A23C7158BE8C0001CF935 /* FBDialog.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FBDialog.bundle; sourceTree = "<group>"; };
 		AF9B55561603D54D00662F2F /* UIColor+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extras.h"; sourceTree = "<group>"; };
@@ -1472,6 +1484,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		260DC2A41807D32100E7CADA /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				260DC2A51807D32100E7CADA /* LRootViewController.h */,
+				260DC2A61807D32100E7CADA /* LRootViewController.m */,
+				260DC2A71807D32100E7CADA /* PRootViewController.h */,
+				260DC2A81807D32100E7CADA /* PRootViewController.m */,
+				260DC2A91807D32100E7CADA /* RootViewController.h */,
+				260DC2AA1807D32100E7CADA /* RootViewController.m */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
 		26F3F3941806CA5B004FC419 /* 3rdLibrary */ = {
 			isa = PBXGroup;
 			children = (
@@ -1484,6 +1509,7 @@
 		26F3F3951806CF09004FC419 /* Moduls */ = {
 			isa = PBXGroup;
 			children = (
+				260DC2A41807D32100E7CADA /* Root */,
 				AF3A40D816A069B2009E1939 /* Info */,
 				AFBD330B16C51BB50093302E /* AdView */,
 			);
@@ -2123,8 +2149,8 @@
 			children = (
 				AF8DB0B81480E97A00C55084 /* AppDelegate.h */,
 				AF8DB0B91480E97A00C55084 /* AppDelegate.m */,
-				AF8DB0BB1480E97A00C55084 /* RootViewController.h */,
-				AF8DB0BC1480E97A00C55084 /* RootViewController.m */,
+				AF8DB0BB1480E97A00C55084 /* IHRootViewController.h */,
+				AF8DB0BC1480E97A00C55084 /* IHRootViewController.m */,
 				AF6A5FF614B4FDE300972C27 /* Manager */,
 				AFD63FB3148620E800F4AD86 /* ViewController */,
 				AFFB67DE159DD03A005FD1B3 /* DataView */,
@@ -3145,17 +3171,19 @@
 			files = (
 				AF2E8FDB16C7ED6500861D05 /* main.m in Sources */,
 				AF2E8FDC16C7ED6500861D05 /* AppDelegate.m in Sources */,
-				AF2E8FDD16C7ED6500861D05 /* RootViewController.m in Sources */,
+				AF2E8FDD16C7ED6500861D05 /* IHRootViewController.m in Sources */,
 				AF2E8FDE16C7ED6500861D05 /* NSString+Extras.m in Sources */,
 				AF2E8FDF16C7ED6500861D05 /* UIAlertView+Extras.m in Sources */,
 				AF2E8FE016C7ED6500861D05 /* UIImage+Extras.m in Sources */,
 				AF2E8FE116C7ED6500861D05 /* ELCAlbumPickerController.m in Sources */,
+				260DC2AC1807D32100E7CADA /* LRootViewController.m in Sources */,
 				AF2E8FE216C7ED6500861D05 /* ELCAsset.m in Sources */,
 				AF2E8FE316C7ED6500861D05 /* ELCAssetCell.m in Sources */,
 				AF2E8FE416C7ED6500861D05 /* ELCAssetTablePicker.m in Sources */,
 				AF2E8FE516C7ED6500861D05 /* ELCImagePickerController.m in Sources */,
 				AF2E8FE616C7ED6500861D05 /* MyView.m in Sources */,
 				AF2E8FE716C7ED6500861D05 /* LoadingView.m in Sources */,
+				260DC2B01807D32100E7CADA /* RootViewController.m in Sources */,
 				AF2E8FE916C7ED6500861D05 /* UIPopoverController+Extras.m in Sources */,
 				AF2E8FEA16C7ED6500861D05 /* UIView+Extras.m in Sources */,
 				AF2E8FEC16C7ED6500861D05 /* AlbumLoader.m in Sources */,
@@ -3208,6 +3236,7 @@
 				AF2E901D16C7ED6500861D05 /* EffectViewController.m in Sources */,
 				AF2E901E16C7ED6500861D05 /* InfoTableViewController.m in Sources */,
 				AF2E901F16C7ED6500861D05 /* ImageFilter.m in Sources */,
+				260DC2AE1807D32100E7CADA /* PRootViewController.m in Sources */,
 				AF2E902016C7ED6500861D05 /* PhotoEditFunctionScrollView.m in Sources */,
 				AF2E902116C7ED6500861D05 /* ShareViewController.m in Sources */,
 				AF2E902216C7ED6500861D05 /* FacebookManager.m in Sources */,
@@ -3239,17 +3268,19 @@
 			files = (
 				AF8DB0B61480E97A00C55084 /* main.m in Sources */,
 				AF8DB0BA1480E97A00C55084 /* AppDelegate.m in Sources */,
-				AF8DB0BD1480E97A00C55084 /* RootViewController.m in Sources */,
+				AF8DB0BD1480E97A00C55084 /* IHRootViewController.m in Sources */,
 				AFC984331486D2C1004E3B02 /* NSString+Extras.m in Sources */,
 				AFC984341486D2C1004E3B02 /* UIAlertView+Extras.m in Sources */,
 				AFC984351486D2C1004E3B02 /* UIImage+Extras.m in Sources */,
 				AFBDC59D14891ECA00059D6A /* ELCAlbumPickerController.m in Sources */,
+				260DC2AB1807D32100E7CADA /* LRootViewController.m in Sources */,
 				AFBDC59F14891ECA00059D6A /* ELCAsset.m in Sources */,
 				AFBDC5A014891ECA00059D6A /* ELCAssetCell.m in Sources */,
 				AFBDC5A214891ECA00059D6A /* ELCAssetTablePicker.m in Sources */,
 				AFBDC5A414891ECA00059D6A /* ELCImagePickerController.m in Sources */,
 				AFB8666A149243FC00DED9EF /* MyView.m in Sources */,
 				AF373FB51496C815000BD135 /* LoadingView.m in Sources */,
+				260DC2AF1807D32100E7CADA /* RootViewController.m in Sources */,
 				AFC2688714A36B2600CDEB87 /* UIPopoverController+Extras.m in Sources */,
 				AFC3297C14A9C8EE00F61B92 /* UIView+Extras.m in Sources */,
 				AFCDC2EB14D98B7100BAC0DD /* AlbumLoader.m in Sources */,
@@ -3302,6 +3333,7 @@
 				AFAF86B016A4A526007C22CE /* EffectViewController.m in Sources */,
 				AFC1C53F16A6BA7100E68AAB /* InfoTableViewController.m in Sources */,
 				AF68132316A6CD6900E5EDEF /* ImageFilter.m in Sources */,
+				260DC2AD1807D32100E7CADA /* PRootViewController.m in Sources */,
 				AF68132416A6CD6900E5EDEF /* PhotoEditFunctionScrollView.m in Sources */,
 				AFA18A6E16A7432300275278 /* ShareViewController.m in Sources */,
 				AFA18A7116A7791100275278 /* FacebookManager.m in Sources */,

@@ -7,14 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RootViewController.h"
+#import "IHRootViewController.h"
 #import "PhotoEditFunctionScrollView.h"
 #import "FrameScrollView.h"
 #import "GPUImage.h"
 #import "SpriteManager.h"
 
 @interface EffectViewController : UIViewController<PhotoEditFunctionScrollViewDelegate, FrameScrollViewDelegate>{
-	RootViewController *root;
+	IHRootViewController *root;
 	SpriteManager *spriteManager;
 
 	PhotoEditFunctionScrollView *_functionScrollView;

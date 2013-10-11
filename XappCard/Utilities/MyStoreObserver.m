@@ -7,7 +7,7 @@
 //
 
 #import "MyStoreObserver.h"
-#import "RootViewController.h"
+#import "IHRootViewController.h"
 
 @implementation MyStoreObserver
 
@@ -47,7 +47,7 @@
 		
 	}
 	else{
-		[[LoadingView sharedLoadingView]addInView:[[RootViewController sharedInstance]view]];
+		[[LoadingView sharedLoadingView]addInView:[[IHRootViewController sharedInstance]view]];
 	}
 	
 	SKProductsRequest *request= [[SKProductsRequest alloc] initWithProductIdentifiers: [NSSet setWithObject: iden]];
@@ -66,7 +66,7 @@
 		
 	}
 	else{
-		[[LoadingView sharedLoadingView]addInView:[[RootViewController sharedInstance]view]];
+		[[LoadingView sharedLoadingView]addInView:[[IHRootViewController sharedInstance]view]];
 	}
 	
 	delegate = _delegate;
@@ -165,7 +165,7 @@
 	
 	[[NSUserDefaults standardUserDefaults]synchronize];
 	
-	[[RootViewController sharedInstance]IAPDidFinished:iden];
+	[[IHRootViewController sharedInstance]IAPDidFinished:iden];
 	
 }
 
@@ -230,7 +230,7 @@
 		[alert show];
 	}
 	else{
-		[[RootViewController sharedInstance]IAPDidRestored];
+		[[IHRootViewController sharedInstance]IAPDidRestored];
 	}
 	
 

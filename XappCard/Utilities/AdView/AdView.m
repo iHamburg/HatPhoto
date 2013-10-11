@@ -7,7 +7,7 @@
 //
 
 #import "AdView.h"
-#import "RootViewController.h"
+#import "IHRootViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "Utilities.h"
 
@@ -292,7 +292,7 @@ static id sharedInstance;
 	_gadView.layer.shadowColor = [UIColor grayColor].CGColor;
 	
 	_gadView.adUnitID = MY_BANNER_UNIT_ID;
-	_gadView.rootViewController = [RootViewController sharedInstance];
+	_gadView.rootViewController = [IHRootViewController sharedInstance];
 	
 	_gadView.delegate = self;
 	[_gadView loadRequest:[GADRequest request]];

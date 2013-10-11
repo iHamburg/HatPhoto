@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "Utilities.h"
-#import "RootViewController.h"
+#import "IHRootViewController.h"
 #import "MyView.h"
 
 @class AVCamViewController;
 @class HatCatScrollView, HatScrollView;
 
 @interface MainViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate,UIActionSheetDelegate>{
-	RootViewController *root;
+	IHRootViewController *root;
 	SpriteManager *spriteManager;
 	
 	

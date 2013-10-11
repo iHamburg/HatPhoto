@@ -127,7 +127,7 @@
 
 // 436/524
 - (void)loadView{
-	root = [RootViewController sharedInstance];
+	root = [IHRootViewController sharedInstance];
 	spriteManager = [SpriteManager sharedInstance];
 	[self registerNotifications];
     

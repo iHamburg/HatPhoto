@@ -7,7 +7,7 @@
 //
 
 #import "SpriteManager.h"
-#import "RootViewController.h"
+#import "IHRootViewController.h"
 #import "HatCategory.h"
 
 @implementation SpriteManager

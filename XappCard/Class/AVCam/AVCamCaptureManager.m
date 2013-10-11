@@ -51,7 +51,7 @@
 #import <MobileCoreServices/UTCoreTypes.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <ImageIO/CGImageProperties.h>
-#import "RootViewController.h"
+#import "IHRootViewController.h"
 
 @interface AVCamCaptureManager (RecorderDelegate)
 @end
@@ -281,7 +281,7 @@
 //																 [image release];
 //
 //																 [library release];
-																 [[RootViewController sharedInstance] didTakePicture:image];
+																 [[IHRootViewController sharedInstance] didTakePicture:image];
 																 
 //																 [[self session] stopRunning];
 															 }

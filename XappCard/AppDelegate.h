@@ -10,7 +10,7 @@
 #import "FBConnect.h"
 //#import "FBViewController.h"
 
-@class RootViewController;
+@class IHRootViewController;
 
 void uncaughtExceptionHandler(NSException *exception);
 
@@ -20,7 +20,7 @@ void uncaughtExceptionHandler(NSException *exception);
 @property (nonatomic, strong) Facebook *facebook;
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) RootViewController *viewController;
+@property (strong, nonatomic) IHRootViewController *viewController;
 
 - (void)customizeAppearance;
 

@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RootViewController.h"
+#import "IHRootViewController.h"
 #import "SpriteManager.h"
 
 @interface ShareViewController : UIViewController<UITableViewDataSource,UITableViewDelegate, UITextViewDelegate>{
-	RootViewController *root;
+	IHRootViewController *root;
 	SpriteManager *spriteManager;
 	
 	UIImageView *_imgV;

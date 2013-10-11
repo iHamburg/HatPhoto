@@ -7,7 +7,7 @@
 //
 
 #import "InstructionViewController.h"
-#import "RootViewController.h"
+#import "IHRootViewController.h"
 #import "Utilities.h"
 
 @implementation InstructionViewController
@@ -31,7 +31,7 @@
 - (void)loadView
 {
 
-	self.view = [[UIView alloc] initWithFrame:[[RootViewController sharedInstance]r]];
+	self.view = [[UIView alloc] initWithFrame:[[IHRootViewController sharedInstance]r]];
 	self.view.backgroundColor = kDarkPatternColor;
 	
 	UIView *container = [[UIView alloc]initWithFrame:self.view.bounds];

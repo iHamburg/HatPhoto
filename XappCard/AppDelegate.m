@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 
-#import "RootViewController.h"
+#import "IHRootViewController.h"
 #import "Flurry.h"
 
 #import "FacebookManager.h"
@@ -73,7 +73,7 @@ static NSString *FLURRYFREEKEY = @"Q6F2JCSBVD9SXFZWC8GK";
 
 //	NSLog(@"window # %@",self.window);
 	
-	self.viewController = [RootViewController sharedInstance];
+	self.viewController = [IHRootViewController sharedInstance];
 
 
     self.window.rootViewController = self.viewController;

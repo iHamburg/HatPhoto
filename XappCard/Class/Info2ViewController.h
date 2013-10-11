@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Utilities.h"
 #import "InstructionViewController.h"
-#import "RootViewController.h"
+#import "IHRootViewController.h"
 
 @interface Info2ViewController : UIViewController<InstructionDelegate>{
 
@@ -29,7 +29,7 @@
 	CGFloat width,height;
 }
 
-@property (nonatomic, unsafe_unretained) RootViewController *root;
+@property (nonatomic, unsafe_unretained) IHRootViewController *root;
 
 - (void)back;
 - (void)aboutus;
