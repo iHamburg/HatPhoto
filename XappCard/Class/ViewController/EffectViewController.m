@@ -267,7 +267,7 @@
 #pragma mark - Motion (Shake)
 
 - (void) motionWasRecognized:(NSNotification*)notif{
-	[[AudioController sharedInstance]playAudio:AudioTypeShake];
+//	[[AudioController sharedInstance]playAudio:AudioTypeShake];
 
 	if (self.isEffectMode) {
 		[self imageSelectRandomFilter];
@@ -377,33 +377,33 @@
 	[root toShareVCWithImage:img];
 }
 
-
-#pragma mark - ADView
-
-
-- (void)layoutBanner:(UIView*)banner loaded:(BOOL)loaded{
-	
-	[UIView animateWithDuration:0.25 animations:^{
-		
-		if (loaded) { // 从不显示到显示banner
-			[_buttonContainer setOrigin:CGPointMake(75, _h-_scrollViewContainer.height-_buttonContainer.height- 50)];
-			[_scrollViewContainer setOrigin:CGPointMake(0, _h-_scrollViewContainer.height - 50)];
-			[banner setOrigin:CGPointMake(0, _h)];
-			
-		}
-		else{
-			[_buttonContainer setOrigin:CGPointMake(75, _h-_scrollViewContainer.height-_buttonContainer.height)];
-			[_scrollViewContainer setOrigin:CGPointMake(0, _h-_scrollViewContainer.height)];
-			[banner setOrigin:CGPointMake(0, _h+_hAdBanner)];
-		}
-		
-    }];
-	
-	//	NSLog(@"H# %f,hBanner # %f,banner # %@",_h,_hAdBanner,banner);
-	
-	
-}
-
+//
+//#pragma mark - ADView
+//
+//
+//- (void)layoutBanner:(UIView*)banner loaded:(BOOL)loaded{
+//	
+//	[UIView animateWithDuration:0.25 animations:^{
+//		
+//		if (loaded) { // 从不显示到显示banner
+//			[_buttonContainer setOrigin:CGPointMake(75, _h-_scrollViewContainer.height-_buttonContainer.height- 50)];
+//			[_scrollViewContainer setOrigin:CGPointMake(0, _h-_scrollViewContainer.height - 50)];
+//			[banner setOrigin:CGPointMake(0, _h)];
+//			
+//		}
+//		else{
+//			[_buttonContainer setOrigin:CGPointMake(75, _h-_scrollViewContainer.height-_buttonContainer.height)];
+//			[_scrollViewContainer setOrigin:CGPointMake(0, _h-_scrollViewContainer.height)];
+//			[banner setOrigin:CGPointMake(0, _h+_hAdBanner)];
+//		}
+//		
+//    }];
+//	
+//	//	NSLog(@"H# %f,hBanner # %f,banner # %@",_h,_hAdBanner,banner);
+//	
+//	
+//}
+//
 
 
 @end

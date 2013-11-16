@@ -13,6 +13,7 @@
 
 #import "FacebookManager.h"
 #import "CPMotionRecognizingWindow.h"
+#import "Appirater.h"
 
 @implementation AppDelegate
 
@@ -27,7 +28,16 @@ static NSString *FLURRYFREEKEY = @"Q6F2JCSBVD9SXFZWC8GK";
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 	NSLog(@"applicaiton did lauch");
-	NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
+	
+    
+    [Appirater setAppId:kAppID];
+    [Appirater setDaysUntilPrompt:0];
+    [Appirater setUsesUntilPrompt:3];
+    [Appirater setSignificantEventsUntilPrompt:-1];
+    [Appirater setTimeBeforeReminding:2];
+    [Appirater setDebug:NO];
+    
+    NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
 	
 // 如果不是debug， startsesseion
 
@@ -79,6 +89,8 @@ static NSString *FLURRYFREEKEY = @"Q6F2JCSBVD9SXFZWC8GK";
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
 
+    
+    [Appirater appLaunched:YES];
 
     return YES;
 }
@@ -106,6 +118,8 @@ static NSString *FLURRYFREEKEY = @"Q6F2JCSBVD9SXFZWC8GK";
     /*
      Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
      */
+    
+    [Appirater appEnteredForeground:YES];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application

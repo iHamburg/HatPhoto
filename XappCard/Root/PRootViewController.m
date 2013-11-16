@@ -15,8 +15,13 @@
 @implementation PRootViewController
 
 - (void)loadView{
+    
+    [super loadView];
     _r = [UIScreen mainScreen].bounds;
 	self.view = [[UIView alloc]initWithFrame:_r];
+    _w = _r.size.width;
+    _h = _r.size.height;
+    
 }
 - (void)didReceiveMemoryWarning
 {

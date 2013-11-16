@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "PRootViewController.h"
-#import "AdView.h"
+//#import "AdView.h"
 #import "InstructionViewController.h"
 
 
-#define kFirstVersionKey @"firstVersionKey"
-#define kLastVersionKey @"lastVersionKey"
+//#define kFirstVersionKey @"firstVersionKey"
+//#define kLastVersionKey @"lastVersionKey"
 
 
 typedef enum {
@@ -23,7 +23,7 @@ typedef enum {
 }Scene;
 
 
-extern CGFloat _hAdBanner;
+//extern CGFloat _hAdBanner;
 
 
 @class MainViewController;
@@ -32,7 +32,7 @@ extern CGFloat _hAdBanner;
 @class InfoTableViewController;
 
 
-@interface IHRootViewController : UIViewController< UIImagePickerControllerDelegate,
+@interface IHRootViewController : PRootViewController< UIImagePickerControllerDelegate,
 UIActionSheetDelegate,UIAlertViewDelegate,UINavigationControllerDelegate,InstructionDelegate>{
 
 	UIImagePickerController *imgPicker;
@@ -45,14 +45,14 @@ UIActionSheetDelegate,UIAlertViewDelegate,UINavigationControllerDelegate,Instruc
 	InstructionViewController *_instructionVC;
 	InfoTableViewController *infoVC;
 	
-	AdView *_adContainer;
+//	AdView *_adContainer;
 	
 	
 	CGRect containerRect,containerWithBannerRect;
 
-	CGFloat w,h;
+//	CGFloat w,h;
 	
-	BOOL firstLoadFlag;
+//	BOOL firstLoadFlag;
 	
 }
 
@@ -64,15 +64,15 @@ UIActionSheetDelegate,UIAlertViewDelegate,UINavigationControllerDelegate,Instruc
 @property (nonatomic, assign) CGRect containerRect; // 带navibar的rect
 @property (nonatomic, assign) CGSize containerSize;
 
-@property (nonatomic, assign) BOOL isFirstOpen,isUpdateOpen;
-@property (nonatomic, assign) float firstVersion, lastVersion, thisVersion; // lastVersion 只用来判断是否update！
+//@property (nonatomic, assign) BOOL isFirstOpen,isUpdateOpen;
+//@property (nonatomic, assign) float firstVersion, lastVersion, thisVersion; // lastVersion 只用来判断是否update！
 
 @property (nonatomic, strong) NSString *hatName;
 
-+(id)sharedInstance;
+//+(id)sharedInstance;
 
-- (void)checkVersion;
-- (void)preLoad;
+//- (void)checkVersion;
+//- (void)preLoad;
 
 
 - (void)toEffectVCWithImage:(UIImage*)pictureImg;

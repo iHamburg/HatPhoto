@@ -263,28 +263,28 @@
 	}
 	
 }
-
-#pragma mark - ADView
-- (void)layoutBanner:(UIView*)banner loaded:(BOOL)loaded{
-	
-	[UIView animateWithDuration:0.25 animations:^{
-		
-		if (loaded) { // 从不显示到显示banner
-
-			[banner setOrigin:CGPointMake(0, _h)];
-			
-		}
-		else{
-
-			[banner setOrigin:CGPointMake(0, _h+_hAdBanner)];
-		}
-		
-    }];
-	
-	//	NSLog(@"H# %f,hBanner # %f,banner # %@",_h,_hAdBanner,banner);
-	
-	
-}
-
+//
+//#pragma mark - ADView
+//- (void)layoutBanner:(UIView*)banner loaded:(BOOL)loaded{
+//	
+//	[UIView animateWithDuration:0.25 animations:^{
+//		
+//		if (loaded) { // 从不显示到显示banner
+//
+//			[banner setOrigin:CGPointMake(0, _h)];
+//			
+//		}
+//		else{
+//
+//			[banner setOrigin:CGPointMake(0, _h+_hAdBanner)];
+//		}
+//		
+//    }];
+//	
+//	//	NSLog(@"H# %f,hBanner # %f,banner # %@",_h,_hAdBanner,banner);
+//	
+//	
+//}
+//
 
 @end

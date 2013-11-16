@@ -28,6 +28,6 @@
 @property (nonatomic, strong) UIImage *img;
 
 
-- (void)layoutBanner:(UIView*)banner loaded:(BOOL)loaded;
+//- (void)layoutBanner:(UIView*)banner loaded:(BOOL)loaded;
 
 @end

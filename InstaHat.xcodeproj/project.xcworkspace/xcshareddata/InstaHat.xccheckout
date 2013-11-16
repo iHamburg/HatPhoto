@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>3F6C2B39-24B3-4ACF-892D-082C0090FA79</string>
+	<key>IDESourceControlProjectName</key>
+	<string>InstaHat</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B4494CE5-F1AD-4D6B-83B4-F8FAF636BCDB</key>
+		<string>https://github.com/iHamburg/HatPhoto.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>InstaHat.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B4494CE5-F1AD-4D6B-83B4-F8FAF636BCDB</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/iHamburg/HatPhoto.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B4494CE5-F1AD-4D6B-83B4-F8FAF636BCDB</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B4494CE5-F1AD-4D6B-83B4-F8FAF636BCDB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>HatPhoto</string>
+		</dict>
+	</array>
+</dict>
+</plist>

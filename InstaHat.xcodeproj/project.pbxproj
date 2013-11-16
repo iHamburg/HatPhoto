@@ -13,6 +13,8 @@
 		260DC2AE1807D32100E7CADA /* PRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 260DC2A81807D32100E7CADA /* PRootViewController.m */; };
 		260DC2AF1807D32100E7CADA /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 260DC2AA1807D32100E7CADA /* RootViewController.m */; };
 		260DC2B01807D32100E7CADA /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 260DC2AA1807D32100E7CADA /* RootViewController.m */; };
+		263778D718156D8200F4C61D /* Appirater.m in Sources */ = {isa = PBXBuildFile; fileRef = 263778D518156D8200F4C61D /* Appirater.m */; };
+		263778D818156D8200F4C61D /* Appirater.m in Sources */ = {isa = PBXBuildFile; fileRef = 263778D518156D8200F4C61D /* Appirater.m */; };
 		26DEEC8217FD1E6500AFAD92 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26DEEC8117FD1E6500AFAD92 /* Images.xcassets */; };
 		26F3F3961806EE2B004FC419 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26DEEC8117FD1E6500AFAD92 /* Images.xcassets */; };
 		26F3F39A1806F934004FC419 /* libFlurry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 26F3F3991806F934004FC419 /* libFlurry.a */; };
@@ -885,6 +887,9 @@
 		260DC2A81807D32100E7CADA /* PRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRootViewController.m; sourceTree = "<group>"; };
 		260DC2A91807D32100E7CADA /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		260DC2AA1807D32100E7CADA /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		263778D418156D8200F4C61D /* Appirater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Appirater.h; sourceTree = "<group>"; };
+		263778D518156D8200F4C61D /* Appirater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Appirater.m; sourceTree = "<group>"; };
+		263778D618156D8200F4C61D /* AppiraterDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppiraterDelegate.h; sourceTree = "<group>"; };
 		26DD18A917FC39E0005CFC7C /* InstaHat Pro copy-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "InstaHat Pro copy-Info.plist"; sourceTree = "<group>"; };
 		26DEEC8117FD1E6500AFAD92 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "../../ShakeHat Pro/Images.xcassets"; sourceTree = "<group>"; };
 		26F3F3981806F934004FC419 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
@@ -1497,9 +1502,20 @@
 			path = Root;
 			sourceTree = "<group>";
 		};
+		263778D318156D8200F4C61D /* Appirater */ = {
+			isa = PBXGroup;
+			children = (
+				263778D418156D8200F4C61D /* Appirater.h */,
+				263778D518156D8200F4C61D /* Appirater.m */,
+				263778D618156D8200F4C61D /* AppiraterDelegate.h */,
+			);
+			path = Appirater;
+			sourceTree = "<group>";
+		};
 		26F3F3941806CA5B004FC419 /* 3rdLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				263778D318156D8200F4C61D /* Appirater */,
 				26F3F39C1806F9EE004FC419 /* Admob */,
 				26F3F3971806F934004FC419 /* Flurry */,
 			);
@@ -2492,6 +2508,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0500;
+				TargetAttributes = {
+					AF8DB0A41480E97900C55084 = {
+						DevelopmentTeam = 5PNFAQX9NQ;
+					};
+				};
 			};
 			buildConfigurationList = AF8DB09F1480E97900C55084 /* Build configuration list for PBXProject "InstaHat" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -3194,6 +3215,7 @@
 				AF2E8FF116C7ED6500861D05 /* ImageFilter.m in Sources */,
 				AF2E8FF216C7ED6500861D05 /* BezierCurve.m in Sources */,
 				AF2E8FF316C7ED6500861D05 /* CatmullRomSpline.m in Sources */,
+				263778D818156D8200F4C61D /* Appirater.m in Sources */,
 				AF2E8FF416C7ED6500861D05 /* CubicBezierCurve.m in Sources */,
 				AF2E8FF516C7ED6500861D05 /* LinearBezierCurve.m in Sources */,
 				AF2E8FF616C7ED6500861D05 /* NSArray_PointArray.m in Sources */,
@@ -3291,6 +3313,7 @@
 				AFBD8DD914E9BD9F003F64B0 /* ImageFilter.m in Sources */,
 				AFBD8DEA14E9C124003F64B0 /* BezierCurve.m in Sources */,
 				AFBD8DEB14E9C124003F64B0 /* CatmullRomSpline.m in Sources */,
+				263778D718156D8200F4C61D /* Appirater.m in Sources */,
 				AFBD8DEC14E9C124003F64B0 /* CubicBezierCurve.m in Sources */,
 				AFBD8DED14E9C124003F64B0 /* LinearBezierCurve.m in Sources */,
 				AFBD8DEE14E9C124003F64B0 /* NSArray_PointArray.m in Sources */,
@@ -3422,7 +3445,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\\\\\\\"$(SRCROOT)/XappCard/Utilities/AdView/Admob\\\\\\\"",
 					/Users/qing/Documents/iOSProject/HatPhoto/XappCard/Flurry,
 					/Users/qing/Documents/iOSProject/HatPhoto/XappCard/Admob,
 				);
@@ -3463,7 +3485,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\\\\\\\"$(SRCROOT)/XappCard/Utilities/AdView/Admob\\\\\\\"",
 					/Users/qing/Documents/iOSProject/HatPhoto/XappCard/Flurry,
 					/Users/qing/Documents/iOSProject/HatPhoto/XappCard/Admob,
 				);
@@ -3552,8 +3573,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Xin Chen (2JS83C3H44)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Xin Chen (2JS83C3H44)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XappCard/XappCard-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
@@ -3580,8 +3601,8 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = InstaHat_F;
-				PROVISIONING_PROFILE = "4D605162-9ADD-46F7-A96A-C7A46093A26C";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3558FEDF-8E42-4DCD-8280-DB360B86FDE7";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "101EF5D4-3201-4396-B63E-F96828EDC187";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -3594,8 +3615,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Xin Chen";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Xin Chen";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XappCard/XappCard-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "";
@@ -3623,7 +3644,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = InstaHat;
-				PROVISIONING_PROFILE = "D6E01E46-F91D-46FE-BED4-134E1BC62F87";
+				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7177FB85-530E-4AD6-96FA-93A8B16D297C";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;

@@ -47,7 +47,7 @@
 
 - (BOOL)isEffectMode;
 
-- (void)layoutBanner:(UIView*)banner loaded:(BOOL)loaded;
+//- (void)layoutBanner:(UIView*)banner loaded:(BOOL)loaded;
 
 - (void)toShare;
 

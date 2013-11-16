@@ -129,10 +129,12 @@
 - (void)loadView{
 	root = [IHRootViewController sharedInstance];
 	spriteManager = [SpriteManager sharedInstance];
+
 	[self registerNotifications];
     
+    
     self.view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, _w, isIOS7?_h:_h-44)];
-	
+	 NSLog(@"main # %@, bottom # %@",self.view,_bottomToolbar);
     _wHatV = 300;
 	
 	
@@ -319,7 +321,7 @@
 #pragma mark - Motion (Shake)
 
 - (void) motionWasRecognized:(NSNotification*)notif{
-	[[AudioController sharedInstance]playAudio:AudioTypeShake];
+//	[[AudioController sharedInstance]playAudio:AudioTypeShake];
 	
 	[self shake];
 	
@@ -517,37 +519,37 @@
 	return img;
 }
 
-
-
-#pragma mark - ADView
-
-- (void)layoutBanner:(UIView*)banner loaded:(BOOL)loaded{
-	L();
-    NSLog(@"_h # %f, loaded # %d",_h,loaded);
-    
-	[UIView animateWithDuration:0.25 animations:^{
-		
-		if (loaded) { // 从不显示到显示banner
-			[_bottomToolbar setOrigin:CGPointMake(0, _h-_bottomToolbar.height-50)];
-			[_categoryScrollView setOrigin:CGPointMake(0, _h-_bottomToolbar.height-_categoryScrollView.height -50)];
-			[_hatScrollView setOrigin:CGPointMake(0, _h-_bottomToolbar.height-_hatScrollView.height -50)];
-			[banner setOrigin:CGPointMake(0, _h)];
-			
-		}
-		else{
-			[_bottomToolbar setOrigin:CGPointMake(0, _h-_bottomToolbar.height)];
-			[_categoryScrollView setOrigin:CGPointMake(0, _h-_bottomToolbar.height-_categoryScrollView.height)];
-			[_hatScrollView setOrigin:CGPointMake(0, _h-_bottomToolbar.height-_hatScrollView.height)];
-			[banner setOrigin:CGPointMake(0, _h+_hAdBanner)];
-		}
-		
-    }];
-
-	
-//	NSLog(@"H# %f,hBanner # %f,banner # %@",_h,_hAdBanner,banner);
-	
-	
-}
+//
+//
+//#pragma mark - ADView
+//
+//- (void)layoutBanner:(UIView*)banner loaded:(BOOL)loaded{
+//	L();
+//    NSLog(@"_h # %f, loaded # %d",_h,loaded);
+//    
+//	[UIView animateWithDuration:0.25 animations:^{
+//		
+//		if (loaded) { // 从不显示到显示banner
+//			[_bottomToolbar setOrigin:CGPointMake(0, _h-_bottomToolbar.height-50)];
+//			[_categoryScrollView setOrigin:CGPointMake(0, _h-_bottomToolbar.height-_categoryScrollView.height -50)];
+//			[_hatScrollView setOrigin:CGPointMake(0, _h-_bottomToolbar.height-_hatScrollView.height -50)];
+//			[banner setOrigin:CGPointMake(0, _h)];
+//			
+//		}
+//		else{
+//			[_bottomToolbar setOrigin:CGPointMake(0, _h-_bottomToolbar.height)];
+//			[_categoryScrollView setOrigin:CGPointMake(0, _h-_bottomToolbar.height-_categoryScrollView.height)];
+//			[_hatScrollView setOrigin:CGPointMake(0, _h-_bottomToolbar.height-_hatScrollView.height)];
+//			[banner setOrigin:CGPointMake(0, _h+banner.height)];
+//		}
+//		
+//    }];
+//
+//	
+////	NSLog(@"H# %f,hBanner # %f,banner # %@",_h,_hAdBanner,banner);
+//	
+//	
+//}
 
 
 #pragma mark - Test

@@ -67,7 +67,7 @@
 - (void)didSelectedCategory:(HatCategory*)cat;
 - (void)didSelectedHatNamed:(NSString*)imgName;
 
-- (void)layoutBanner:(UIView*)banner loaded:(BOOL)loaded;
+//- (void)layoutBanner:(UIView*)banner loaded:(BOOL)loaded;
 
 - (void)test;
 

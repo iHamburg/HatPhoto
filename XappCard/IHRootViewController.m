@@ -20,41 +20,43 @@
 
 @synthesize imgPicker,hatName;
 
-@synthesize firstVersion,lastVersion,thisVersion,isFirstOpen,isUpdateOpen;
+//@synthesize firstVersion,lastVersion,thisVersion,isFirstOpen,isUpdateOpen;
 
-CGFloat _hAdBanner;
+//CGFloat _hAdBanner;
 
 #pragma mark - View lifecycle
-+(id)sharedInstance{
-	static id sharedInstance;
-	if (sharedInstance == nil) {
-
-		sharedInstance = [[IHRootViewController alloc]init];
-		
-	}
-	
-	return sharedInstance;
-	
-}
+//+(id)sharedInstance{
+//	static id sharedInstance;
+//	if (sharedInstance == nil) {
+//
+//		sharedInstance = [[IHRootViewController alloc]init];
+//		
+//	}
+//	
+//	return sharedInstance;
+//	
+//}
 
 - (void)loadView{
 //	L();
 	
 //	NSLog(@"paid version # %d",isPaid());
-	
-	r = [UIScreen mainScreen].bounds;
-	w = r.size.width;
-	h = r.size.height;
-	
-	_r =  [UIScreen mainScreen].bounds;
-    _w = _r.size.width;
-    _h = _r.size.height;
-	
-	self.view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, w, h)];
+//	
+//	r = [UIScreen mainScreen].bounds;
+//	w = r.size.width;
+//	h = r.size.height;
+//	
+//	_r =  [UIScreen mainScreen].bounds;
+//    _w = _r.size.width;
+//    _h = _r.size.height;
+//	
+//	self.view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, w, h)];
 
-	[self checkVersion];
+    [super loadView];
+    
+//	[self checkVersion];
 	
-	containerRect = CGRectMake(0, 0, w, h-44); // 带Navibar
+	containerRect = CGRectMake(0, 0, _w, _h-44); // 带Navibar
 
 
 	self.view.backgroundColor = [UIColor blackColor];
@@ -63,7 +65,7 @@ CGFloat _hAdBanner;
 	_mainVC.view.alpha = 1;
 
 	nav = [[UINavigationController alloc]initWithRootViewController:_mainVC];
-	nav.view.frame = CGRectMake(0, 0, w, h);
+	nav.view.frame = CGRectMake(0, 0, _w, _h);
 
 
 	if (kVersion < 7.0) {
@@ -98,77 +100,80 @@ CGFloat _hAdBanner;
 	
 		
 	// 会调用setTBItem
-	[self preLoad];
+//	[self preLoad];
 	
-	firstLoadFlag = YES;
+//	firstLoadFlag = YES;
 	
 	//提前load
 	_effectVC = [[EffectViewController alloc]init];
 	_effectVC.view.alpha = 1;
 
 
-	[AdView sharedInstance];
+//	[AdView sharedInstance];
 }
 
-
+- (void)handleAppFirstTimeOpen{
+    [self toInstruction];
+}
 
 // 如果是iphone中调用了presentModalVC的话，viewdidAppear还是会不停出现的！！
 - (void)viewDidAppear:(BOOL)animated{
 //	L();
 	[super viewDidAppear:animated];
-
-	if (firstLoadFlag) {
-		firstLoadFlag = NO;
-	}
+//
+//	if (firstLoadFlag) {
+//		firstLoadFlag = NO;
+//	}
 	
+    NSLog(@"root view # %@",self.view.subviews);
 	[self test];
 
 //	NSLog(@"root # %@,imgPicker # %@",self,imgPicker);
 
 }
 
-
-- (void)checkVersion{
-	
-	
-	firstVersion = [[NSUserDefaults standardUserDefaults]floatForKey:kFirstVersionKey];
-	lastVersion = [[NSUserDefaults standardUserDefaults]floatForKey:kLastVersionKey];
-	thisVersion = [[[NSBundle mainBundle] objectForInfoDictionaryKey:(NSString *)kCFBundleVersionKey] floatValue];
-	
-	if (firstVersion == 0.0) { // 第一次安装app
-		isFirstOpen = YES;
-		
-		firstVersion =  [[[NSBundle mainBundle] objectForInfoDictionaryKey:(NSString *)kCFBundleVersionKey] floatValue];
-		[[NSUserDefaults standardUserDefaults]setFloat:firstVersion forKey:kFirstVersionKey];
-		
-		lastVersion = firstVersion;
-		[[NSUserDefaults standardUserDefaults]setFloat:lastVersion forKey:kLastVersionKey];
-		
-	}
-	else{ // 已经安装过app，再次打开
-		if (thisVersion != lastVersion) {
-			isUpdateOpen = YES;
-		}
-		
-		[[NSUserDefaults standardUserDefaults]setFloat:thisVersion forKey:kLastVersionKey];
-	}
-	
-	
-}
-
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    // Return YES for supported orientations
-
-	return UIInterfaceOrientationPortrait;
-    
-}
-
-- (NSUInteger)supportedInterfaceOrientations{
-	//	L();
-	return UIInterfaceOrientationMaskPortrait;
-}
+//
+//- (void)checkVersion{
+//	
+//	
+//	firstVersion = [[NSUserDefaults standardUserDefaults]floatForKey:kFirstVersionKey];
+//	lastVersion = [[NSUserDefaults standardUserDefaults]floatForKey:kLastVersionKey];
+//	thisVersion = [[[NSBundle mainBundle] objectForInfoDictionaryKey:(NSString *)kCFBundleVersionKey] floatValue];
+//	
+//	if (firstVersion == 0.0) { // 第一次安装app
+//		isFirstOpen = YES;
+//		
+//		firstVersion =  [[[NSBundle mainBundle] objectForInfoDictionaryKey:(NSString *)kCFBundleVersionKey] floatValue];
+//		[[NSUserDefaults standardUserDefaults]setFloat:firstVersion forKey:kFirstVersionKey];
+//		
+//		lastVersion = firstVersion;
+//		[[NSUserDefaults standardUserDefaults]setFloat:lastVersion forKey:kLastVersionKey];
+//		
+//	}
+//	else{ // 已经安装过app，再次打开
+//		if (thisVersion != lastVersion) {
+//			isUpdateOpen = YES;
+//		}
+//		
+//		[[NSUserDefaults standardUserDefaults]setFloat:thisVersion forKey:kLastVersionKey];
+//	}
+//	
+//	
+//}
+//
+//
+//- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+//{
+//    // Return YES for supported orientations
+//
+//	return UIInterfaceOrientationPortrait;
+//    
+//}
+//
+//- (NSUInteger)supportedInterfaceOrientations{
+//	//	L();
+//	return UIInterfaceOrientationMaskPortrait;
+//}
 
 - (void)didReceiveMemoryWarning
 {
@@ -179,35 +184,35 @@ CGFloat _hAdBanner;
 
 }
 
-/**
- 
- 当切换当前card的时候调用
- */
-
-
-/**
- 这个是在所有的cover，contentVC都完成后才调用的
- */
-- (void)preLoad{
-
-	if (isFirstOpen) {
-
-
-		
-		[self toInstruction];
-	}
-	else if(isUpdateOpen){
-		
-//		if (thisVersion == isPaid()?2.5:1.2) {
-//	
-//		}
-	}
-	else{
-		
-	}
-
-
-}
+///**
+// 
+// 当切换当前card的时候调用
+// */
+//
+//
+///**
+// 这个是在所有的cover，contentVC都完成后才调用的
+// */
+//- (void)preLoad{
+//
+//	if (isFirstOpen) {
+//
+//
+//		
+//		[self toInstruction];
+//	}
+//	else if(isUpdateOpen){
+//		
+////		if (thisVersion == isPaid()?2.5:1.2) {
+////	
+////		}
+//	}
+//	else{
+//		
+//	}
+//
+//
+//}
 
 
 
