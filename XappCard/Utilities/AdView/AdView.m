@@ -66,6 +66,7 @@ static id sharedInstance;
     [[NSNotificationCenter defaultCenter]postNotificationName:@"ADChanged" object:nil];
     
 }
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -129,9 +130,7 @@ static id sharedInstance;
     return self;
 }
 
--(void)dealloc{
-    
-}
+
 
 - (void)handleResignActive{
 //	L();

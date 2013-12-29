@@ -102,7 +102,7 @@ static LoadingView *sharedLoadingView;
 
 
 - (void)addInViewIntern:(UIView*)aSuperview{
-	L();
+//	L();
 
 	loadingLabel.text = @"";
 	[activityIndicatorView startAnimating];

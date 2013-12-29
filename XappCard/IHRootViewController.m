@@ -98,18 +98,12 @@
 												 name:UIApplicationWillResignActiveNotification
 											   object: [UIApplication sharedApplication]];
 	
-		
-	// 会调用setTBItem
-//	[self preLoad];
-	
-//	firstLoadFlag = YES;
 	
 	//提前load
 	_effectVC = [[EffectViewController alloc]init];
 	_effectVC.view.alpha = 1;
 
 
-//	[AdView sharedInstance];
 }
 
 - (void)handleAppFirstTimeOpen{
@@ -338,7 +332,7 @@
 	// ads
 
     [AdView releaseSharedInstance];
-//	[self initBanner];
+
 	
 	// hat
 	[_mainVC applyCategory];
